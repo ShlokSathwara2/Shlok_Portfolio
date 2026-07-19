@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shlok Sathwara | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Gradient Mesh Background -->
+  <div class="gradient-mesh">
+    <div class="mesh-blob mesh-1"></div>
+    <div class="mesh-blob mesh-2"></div>
+    <div class="mesh-blob mesh-3"></div>
+    <div class="mesh-blob mesh-4"></div>
+    <div class="mesh-blob mesh-5"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">SS</div>
+    <div class="nav-links">
+      <a href="#hero" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#certifications" class="nav-link">Certs</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <div class="hero-content">
+        <div class="hero-badge reveal">Aspiring Software Engineer</div>
+        <h1 class="hero-title reveal">
+          <span class="hero-name">Shlok</span>
+          <span class="hero-name hero-name-accent">Sathwara</span>
+        </h1>
+        <p class="hero-subtitle reveal">Computer Science & Technology at SRMIST. Focused on DSA, Java, AI Integration,
+          and building AI-powered apps. CGPA: 9.44</p>
+        <div class="hero-location reveal">
+          <i class="fas fa-map-marker-alt"></i> Vadodara, Gujarat, India
+        </div>
+        <div class="hero-buttons reveal">
+          <button class="btn-explore" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            Explore Me
+          </button>
+          <a href="#contact" class="btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-social reveal">
+          <a href="https://github.com/ShlokSathwara2" target="_blank" class="social-link"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/shlok-sathwara-4b91ab319/" target="_blank" class="social-link"><i
+              class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-photo-wrapper reveal">
+        <div class="hero-photo-glow"></div>
+        <img src="assets/profile.jpg" alt="Shlok Sathwara" class="hero-photo"
+          onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-user\'></i><p>Add photo to<br>assets/profile.jpg</p></div>'">
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">01</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm a Computer Science & Technology student at SRMIST with a CGPA of <strong>9.44</strong>, passionate
+            about building impactful digital products. From leading a team at <strong>Linde Engineering</strong> to
+            building AI-powered tools, I thrive at the intersection of design and engineering.</p>
+          <p>My focus areas are <strong>DSA & Java</strong>, <strong>AI Integration</strong>, and building full-stack
+            applications. I've delivered projects ranging from AI budget trackers to adaptive study platforms, and I
+            hold an <strong>Oracle APEX Cloud Developer</strong> certification.</p>
+          <p>Currently seeking software engineering roles where I can apply my skills in full-stack development, AI
+            integration, and cloud platforms.</p>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <span class="stat-number">9.44</span>
+            <span class="stat-label">CGPA</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">8+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">7</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Experiences</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">02</span>
+        <h2 class="section-title">Experience</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Team Lead — Helpdesk Portal Redesign</h3>
+              <span class="timeline-company">Linde Engineering India Pvt. Ltd.</span>
+              <span class="timeline-date">Jun — Jul 2026 · Vadodara, On-site</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Led a small team with full ownership from planning through delivery</li>
+              <li>Coordinated feature planning, task delegation, and technical decisions</li>
+              <li>Redesigned frontend from scratch — custom animations, interactive UI components</li>
+              <li>Rebuilt backend architecture for structure, maintainability, and clean API design</li>
+              <li>Added stakeholder-requested features improving workflow efficiency</li>
+              <li>Introduced role-based access + admin tooling</li>
+              <li>Built reporting/analytics views for leadership visibility</li>
+            </ul>
+            <div class="timeline-stack">
+              <span>React</span><span>.NET</span><span>SQL Server</span><span>Azure AD</span><span>Framer
+                Motion</span><span>Three.js</span><span>Chart.js</span><span>ASP.NET Web API</span><span>Microsoft Entra
+                ID</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Quality Assurance</h3>
+              <span class="timeline-company">Aaruush, SRM University</span>
+              <span class="timeline-date">Aug 2025 — Present · On-site</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Ensuring quality standards for university technical events and projects</li>
+              <li>Testing, validation, and process improvement for event management systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">03</span>
+        <h2 class="section-title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card featured reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <i class="fas fa-route project-icon"></i>
+            <div class="project-links">
+              <a href="https://learnpath-ai-nuiw.vercel.app" target="_blank"><i
+                  class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">LearnPath</h3>
+          <p class="project-desc">AI-driven adaptive study-path platform with real-time quiz injection. Built with
+            Aditya Bhambhani (Rutgers). Co-developed at Linde.</p>
+          <div class="project-stack">
+            <span>Next.js</span><span>Supabase</span><span>Gemini API</span><span>AI/ML</span>
+          </div>
+        </div>
+
+        <div class="project-card featured reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <i class="fas fa-brain project-icon"></i>
+            <div class="project-links">
+              <a href="https://smart-flow-ai-delta.vercel.app" target="_blank"><i
+                  class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/ShlokSathwara2/Smart-Study-Planner-with-AI" target="_blank"><i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">SmartStudy AI</h3>
+          <p class="project-desc">Real-time collaborative study rooms with SM-2 spaced repetition, voice input via Groq
+            Whisper, offline-first IndexedDB. $0/month infra.</p>
+          <div class="project-stack">
+            <span>Next.js
+              14</span><span>TypeScript</span><span>Supabase</span><span>Groq</span><span>Gemini</span><span>Ollama</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <i class="fas fa-wallet project-icon"></i>
+            <div class="project-links">
+              <a href="https://ai-budget-tracker-9d2e.vercel.app" target="_blank"><i
+                  class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/ShlokSathwara2/AI-BUDGET-TRACKER" target="_blank"><i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">TRIKIA</h3>
+          <p class="project-desc">AI-powered budget tracker with voice commands, anomaly detection, family shared
+            budgets, financial simulator, and bill reminders. Includes React Native mobile app.</p>
+          <div class="project-stack">
+            <span>React</span><span>Node/Express</span><span>MongoDB</span><span>React Native</span><span>JWT</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <i class="fas fa-cogs project-icon"></i>
+            <div class="project-links"></div>
+          </div>
+          <h3 class="project-title">PipeStressRM</h3>
+          <p class="project-desc">Automated resource/scheduling system for pipe-stress engineering. Skill/workload-based
+            task matching, 2-year Gantt schedules generated in under a minute.</p>
+          <div class="project-stack">
+            <span>Python</span><span>OpenPyXL</span><span>Excel Automation</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <i class="fas fa-map-marker-alt project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/ShlokSathwara2/GPS-ATTENDANCE-SYSTEM" target="_blank"><i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Smart Attendance System</h3>
+          <p class="project-desc">GPS-verified attendance with entity-repo-service-controller backend. Geofencing,
+            real-time tracking, role-based dashboards.</p>
+          <div class="project-stack">
+            <span>Java</span><span>JDBC</span><span>MySQL</span><span>HTML</span><span>JavaScript</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <i class="fas fa-film project-icon"></i>
+            <div class="project-links"></div>
+          </div>
+          <h3 class="project-title">CineMatch</h3>
+          <p class="project-desc">AI movie recommendation engine with personalized suggestions based on user preferences
+            and viewing history.</p>
+          <div class="project-stack">
+            <span>React/Next.js</span><span>Flask</span><span>TMDB API</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <i class="fas fa-book project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/ShlokSathwara2/Smart-Study-Planner" target="_blank"><i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Smart Study Planner</h3>
+          <p class="project-desc">Python + AI planning logic with Streamlit interface. Task prioritization and schedule
+            generation.</p>
+          <div class="project-stack">
+            <span>Python</span><span>Streamlit</span><span>AI</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <i class="fas fa-database project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/ShlokSathwara2/College-Database-System" target="_blank"><i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">College Database System</h3>
+          <p class="project-desc">DBMS mini-project with MySQL. Normalization, CRUD operations, and comprehensive data
+            management.</p>
+          <div class="project-stack">
+            <span>MySQL</span><span>JavaScript</span><span>Node.js</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">04</span>
+        <h2 class="section-title">Education</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="education-grid">
+        <div class="education-card reveal">
+          <div class="edu-icon"><i class="fas fa-university"></i></div>
+          <div class="edu-info">
+            <h3>SRM Institute of Science and Technology (SRMIST)</h3>
+            <p class="edu-degree">B.Tech — Computer Science and Technology</p>
+            <p class="edu-date">Aug 2024 — Jun 2028</p>
+            <div class="edu-highlight">
+              <span class="cgpa-badge">CGPA: 9.44</span>
+              <span class="edu-detail">Sem 1: 9.33 · Sem 2: 9.48 · Sem 3: 9.2 · Sem 4: 9.7</span>
+            </div>
+          </div>
+        </div>
+        <div class="education-card reveal">
+          <div class="edu-icon"><i class="fas fa-school"></i></div>
+          <div class="edu-info">
+            <h3>Delhi Public School Vadodara</h3>
+            <p class="edu-degree">Higher Secondary Education</p>
+            <p class="edu-date">Apr 2009 — May 2022</p>
+            <div class="edu-highlight">
+              <span class="edu-detail">Proficiency in English (2021-22), Mathematics (2017-19)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">05</span>
+        <h2 class="section-title">Skills</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-code"></i> Frontend</h3>
+          <div class="skill-tags">
+            <span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>Framer
+              Motion</span><span>Three.js</span><span>HTML/CSS</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-tags">
+            <span>Node.js</span><span>Express</span><span>.NET</span><span>ASP.NET Web
+              API</span><span>Python</span><span>Java</span><span>Flask</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-database"></i> Database</h3>
+          <div class="skill-tags">
+            <span>SQL
+              Server</span><span>MongoDB</span><span>MySQL</span><span>Supabase</span><span>SQLite</span><span>pgvector</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+          <div class="skill-tags">
+            <span>Azure AD</span><span>Microsoft Entra ID</span><span>Oracle APEX</span><span>Git</span><span>GitHub
+              Actions</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-robot"></i> AI & ML</h3>
+          <div class="skill-tags">
+            <span>Gemini API</span><span>Groq</span><span>Ollama</span><span>AI Integration</span><span>Spaced
+              Repetition</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-tools"></i> Languages & Tools</h3>
+          <div class="skill-tags">
+            <span>Java</span><span>Python</span><span>C</span><span>JavaScript</span><span>DSA</span><span>Streamlit</span><span>OpenPyXL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section certifications" id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">06</span>
+        <h2 class="section-title">Certifications</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+          <h3>Oracle APEX Cloud Developer</h3>
+          <p class="cert-issuer">Oracle</p>
+          <p class="cert-date">Oct 2025 — Oct 2027</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-database"></i></div>
+          <h3>Database Management System</h3>
+          <p class="cert-issuer">NPTEL</p>
+          <p class="cert-date">Jan 2026</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-java"></i></div>
+          <h3>DSA using Java</h3>
+          <p class="cert-issuer">NPTEL</p>
+          <p class="cert-date">Nov 2025</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-cubes"></i></div>
+          <h3>OOP Fundamentals</h3>
+          <p class="cert-issuer">NPTEL</p>
+          <p class="cert-date">Apr 2025</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Beginners in C</h3>
+          <p class="cert-issuer">Great Learning</p>
+          <p class="cert-date">Aug 2024</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-terminal"></i></div>
+          <h3>Programming in C</h3>
+          <p class="cert-issuer">Baroda Institute of Technology</p>
+          <p class="cert-date">Jan 2025</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-code"></i></div>
+          <h3>HackTrax 2.0</h3>
+          <p class="cert-issuer">Alexa Developers SRM</p>
+          <p class="cert-date">Certificate of Participation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honors & Awards -->
+  <section class="section honors" id="honors">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">07</span>
+        <h2 class="section-title">Honors & Awards</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="honors-list">
+        <div class="honor-item reveal">
+          <div class="honor-icon"><i class="fas fa-trophy"></i></div>
+          <div class="honor-info">
+            <h3>Toppers of 4th Semester — D1 Section (SRM)</h3>
+            <p>SGPA 9.7 · Jun 2026</p>
+          </div>
+        </div>
+        <div class="honor-item reveal">
+          <div class="honor-icon"><i class="fas fa-trophy"></i></div>
+          <div class="honor-info">
+            <h3>Toppers of 2nd Semester — D1 Section (SRM)</h3>
+            <p>SGPA 9.476 · Jun 2025</p>
+          </div>
+        </div>
+        <div class="honor-item reveal">
+          <div class="honor-icon"><i class="fas fa-trophy"></i></div>
+          <div class="honor-info">
+            <h3>Toppers of 1st Semester — D1 Section (SRM)</h3>
+            <p>SGPA 9.33 · Jan 2025</p>
+          </div>
+        </div>
+        <div class="honor-item reveal">
+          <div class="honor-icon"><i class="fas fa-award"></i></div>
+          <div class="honor-info">
+            <h3>Proficiency in English</h3>
+            <p>Delhi Public School Vadodara · 2021-22</p>
+          </div>
+        </div>
+        <div class="honor-item reveal">
+          <div class="honor-icon"><i class="fas fa-award"></i></div>
+          <div class="honor-info">
+            <h3>Proficiency in Mathematics</h3>
+            <p>Delhi Public School Vadodara · 2017-19</p>
+          </div>
+        </div>
+        <div class="honor-item reveal">
+          <div class="honor-icon"><i class="fas fa-medal"></i></div>
+          <div class="honor-info">
+            <h3>HackTrax 2.0 — Certificate of Participation</h3>
+            <p>Alexa Developers SRM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section class="section achievements" id="achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">08</span>
+        <h2 class="section-title">Achievements</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="achievements-grid">
+        <a href="assets/Internship_Completion_Certificate_of_Shlok_Sathwara.pdf" target="_blank"
+          class="achievement-card reveal">
+          <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+          <h3>Internship Completion Certificate</h3>
+          <p class="achievement-issuer">Linde Engineering India Pvt. Ltd.</p>
+          <p class="achievement-date">Jun — Jul 2026</p>
+          <span class="achievement-link"><i class="fas fa-external-link-alt"></i> View PDF</span>
+        </a>
+        <a href="assets/Certification of Appreciation.pdf" target="_blank" class="achievement-card reveal">
+          <div class="achievement-icon"><i class="fas fa-award"></i></div>
+          <h3>Certificate of Appreciation</h3>
+          <p class="achievement-issuer">Linde Engineering India Pvt. Ltd.</p>
+          <p class="achievement-date">Jul 2026</p>
+          <span class="achievement-link"><i class="fas fa-external-link-alt"></i> View PDF</span>
+        </a>
+        <a href="assets/Certification of Recommendation.pdf" target="_blank" class="achievement-card reveal">
+          <div class="achievement-icon"><i class="fas fa-star"></i></div>
+          <h3>Letter of Recommendation</h3>
+          <p class="achievement-issuer">Linde Engineering India Pvt. Ltd.</p>
+          <p class="achievement-date">Jul 2026</p>
+          <span class="achievement-link"><i class="fas fa-external-link-alt"></i> View PDF</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">09</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-content reveal">
+        <p class="contact-text">Have a project in mind or just want to chat? I'm always open to new opportunities and
+          interesting conversations.</p>
+        <div class="contact-links">
+          <a href="mailto:shloksathwara2@gmail.com" class="contact-link-item">
+            <i class="fas fa-envelope"></i>
+            <span>shloksathwara2@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/shlok-sathwara-4b91ab319/" target="_blank" class="contact-link-item">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/ShlokSathwara2" target="_blank" class="contact-link-item">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Shlok Sathwara. Built with passion.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
