@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   animateTrail();
 
   // Cursor hover states
-  const hoverTargets = document.querySelectorAll('a, button, .project-card, .stat-card, .skill-category, .cert-card, .honor-item, .education-card, .achievement-card');
+  const hoverTargets = document.querySelectorAll('a, button, .project-card, .stat-card, .skill-category, .cert-card, .honor-item, .education-card, .achievement-card, .testimonial-card, .building-card');
   hoverTargets.forEach(el => {
     el.addEventListener('mouseenter', () => {
       cursorDot.classList.add('cursor-hover');
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => ripple.remove(), 600);
   }
 
-  document.querySelectorAll('.btn-explore, .btn-outline, .nav-cta, .social-link, .contact-link-item, .stat-card, .honor-item, .achievement-card').forEach(el => {
+  document.querySelectorAll('.btn-explore, .btn-outline, .nav-cta, .social-link, .contact-link-item, .stat-card, .honor-item, .achievement-card, .testimonial-card').forEach(el => {
     el.style.position = 'relative';
     el.style.overflow = 'hidden';
     el.addEventListener('click', createRipple);
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ── 3D TILT HOVER ON ALL INTERACTIVE ELEMENTS ──
-  document.querySelectorAll('.project-card, .stat-card, .skill-category, .cert-card, .education-card, .achievement-card').forEach(card => {
+  document.querySelectorAll('.project-card, .stat-card, .skill-category, .cert-card, .education-card, .achievement-card, .testimonial-card, .building-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -156,7 +156,63 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
+      // Close mobile menu if open
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('active');
+      document.body.style.overflow = '';
     });
   });
+
+
+  // ── MOBILE HAMBURGER MENU ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+
+  // ── TYPING ANIMATION ──
+  const typingEl = document.getElementById('typingText');
+  const phrases = [
+    'AI-powered applications',
+    'full-stack web apps',
+    'intelligent systems',
+    'scalable backend APIs',
+    'smart automation tools'
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeSpeed = 80;
+
+  function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
+
+    if (isDeleting) {
+      typingEl.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      typeSpeed = 40;
+    } else {
+      typingEl.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+      typeSpeed = 80;
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      typeSpeed = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      typeSpeed = 400;
+    }
+
+    setTimeout(typeEffect, typeSpeed);
+  }
+  typeEffect();
 
 });

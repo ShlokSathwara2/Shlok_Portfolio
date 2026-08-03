@@ -4,7 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shlok Sathwara | Portfolio</title>
+  <title>Shlok Sathwara | Software Engineer & AI Developer</title>
+  <meta name="description" content="Portfolio of Shlok Sathwara — CS student at SRMIST, Software Engineer specializing in AI-powered full-stack applications, DSA, and cloud platforms.">
+  <meta name="keywords" content="Shlok Sathwara, software engineer, full-stack developer, AI, machine learning, Next.js, React, Java, Python, portfolio">
+  <meta name="author" content="Shlok Sathwara">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shlok Sathwara | Software Engineer & AI Developer">
+  <meta property="og:description" content="CS student at SRMIST building AI-powered apps. 10+ projects, Linde intern, Oracle APEX certified.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shlokportfolio.vercel.app">
+  <meta property="og:image" content="assets/profile.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shlok Sathwara | Software Engineer & AI Developer">
+  <meta name="twitter:description" content="CS student at SRMIST building AI-powered apps. 10+ projects, Linde intern, Oracle APEX certified.">
+  <meta name="twitter:image" content="assets/profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/profile.jpg">
+
   <link rel="stylesheet" href="styles.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
@@ -38,7 +58,25 @@
       <a href="#contact" class="nav-link">Contact</a>
     </div>
     <a href="#contact" class="nav-cta">Let's Talk</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-links">
+      <a href="#hero" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#education" class="mobile-link">Education</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#certifications" class="mobile-link">Certs</a>
+      <a href="#achievements" class="mobile-link">Achievements</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </div>
 
   <!-- Hero -->
   <section class="hero" id="hero">
@@ -51,6 +89,9 @@
         </h1>
         <p class="hero-subtitle reveal">Computer Science & Technology at SRMIST. Focused on DSA, Java, AI Integration,
           and building AI-powered apps. CGPA: 9.44</p>
+        <div class="hero-typing reveal">
+          <span class="typing-prefix">I build </span><span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+        </div>
         <div class="hero-location reveal">
           <i class="fas fa-map-marker-alt"></i> Vadodara, Gujarat, India
         </div>
@@ -69,6 +110,8 @@
               class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/shlok-sathwara-4b91ab319/" target="_blank" class="social-link"><i
               class="fab fa-linkedin-in"></i></a>
+          <a href="https://leetcode.com/u/Shlok_Sathwara/" target="_blank" class="social-link"><i
+              class="fas fa-code"></i></a>
         </div>
       </div>
     </div>
@@ -171,6 +214,36 @@
               <li>Ensuring quality standards for university technical events and projects</li>
               <li>Testing, validation, and process improvement for event management systems</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Currently Building -->
+  <section class="section currently-building" id="building">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">WIP</span>
+        <h2 class="section-title">Currently Building</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="building-card reveal">
+        <div class="building-card-glow"></div>
+        <div class="building-content">
+          <div class="building-badge"><i class="fas fa-bolt"></i> In Progress</div>
+          <h3 class="building-title">FRIDAY — AI Voice Assistant</h3>
+          <p class="building-desc">A full-featured personal AI assistant with voice biometric authentication, emotion detection, multi-model intelligence (Gemini + Ollama), RAG pipeline, screen OCR, smart home control, encrypted vault, and proactive scheduling. Built with Python, featuring a plugin architecture and event-driven module communication.</p>
+          <div class="building-features">
+            <span><i class="fas fa-microphone"></i> Voice & Wake Word</span>
+            <span><i class="fas fa-brain"></i> Gemini + Ollama AI</span>
+            <span><i class="fas fa-eye"></i> Screen OCR & Vision</span>
+            <span><i class="fas fa-shield-alt"></i> Face Auth & Vault</span>
+            <span><i class="fas fa-home"></i> Smart Home Control</span>
+            <span><i class="fas fa-calendar"></i> Smart Scheduling</span>
+          </div>
+          <div class="building-stack">
+            <span>Python</span><span>Gemini</span><span>Ollama</span><span>Whisper</span><span>OpenCV</span><span>Tesseract</span><span>SQLite</span><span>FastAPI</span>
           </div>
         </div>
       </div>
@@ -589,6 +662,50 @@
           <p class="achievement-date">Jul 2026</p>
           <span class="achievement-link"><i class="fas fa-external-link-alt"></i> View PDF</span>
         </a>
+        <a href="assets/ICICCS-2026_Paper_Accepted.pdf" target="_blank" class="achievement-card reveal">
+          <div class="achievement-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>Research Paper Accepted — ICICCS-2026</h3>
+          <p class="achievement-issuer">SRM Institute of Science and Technology</p>
+          <p class="achievement-date">2026</p>
+          <span class="achievement-link"><i class="fas fa-external-link-alt"></i> View PDF</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">09</span>
+        <h2 class="section-title">What They Say</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">Shlok consistently demonstrated a strong desire to understand the purpose and business value behind the Linde Helpdesk Portal before starting development. His curiosity and eagerness to learn enabled him to quickly grasp both frontend and backend technologies and deliver high-quality solutions.</p>
+          <p class="testimonial-text">He approached challenges with a positive attitude, remained composed under pressure, and adapted quickly to changing requirements without losing momentum. His dedication, ownership, and professionalism made a positive impact on the project and the team.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MM</div>
+            <div>
+              <h4>Miteshkumar Mehta</h4>
+              <p>IT Department, Linde Engineering India</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">During your six-week internship, you demonstrated a commendable level of enthusiasm, commitment, and aptitude for application development. You successfully developed a prototype application and consistently exhibited a proactive approach toward understanding user requirements.</p>
+          <p class="testimonial-text">Your willingness to listen, learn, and incorporate feedback reflected a mature and professional approach. You left a positive impression as a reliable, dedicated, and capable IT professional in the making.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MV</div>
+            <div>
+              <h4>Mehul Vaidya</h4>
+              <p>Dy. Manager - Facility Management, Linde Engineering India</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -597,7 +714,7 @@
   <section class="section contact" id="contact">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">09</span>
+        <span class="section-tag">10</span>
         <h2 class="section-title">Let's Connect</h2>
         <div class="section-line"></div>
       </div>
@@ -616,6 +733,10 @@
           <a href="https://github.com/ShlokSathwara2" target="_blank" class="contact-link-item">
             <i class="fab fa-github"></i>
             <span>GitHub</span>
+          </a>
+          <a href="https://leetcode.com/u/Shlok_Sathwara/" target="_blank" class="contact-link-item">
+            <i class="fas fa-code"></i>
+            <span>LeetCode</span>
           </a>
         </div>
       </div>
