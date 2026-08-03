@@ -1,5 +1,4 @@
-*.docx
-*.doc
 __pycache__/
 node_modules/
 .env
+ICICCS_Paper.docx
