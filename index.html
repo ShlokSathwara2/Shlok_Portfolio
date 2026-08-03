@@ -51,6 +51,7 @@
       <a href="#about" class="nav-link">About</a>
       <a href="#experience" class="nav-link">Experience</a>
       <a href="#projects" class="nav-link">Projects</a>
+      <a href="#publication" class="nav-link">Research</a>
       <a href="#education" class="nav-link">Education</a>
       <a href="#skills" class="nav-link">Skills</a>
       <a href="#certifications" class="nav-link">Certs</a>
@@ -70,6 +71,7 @@
       <a href="#about" class="mobile-link">About</a>
       <a href="#experience" class="mobile-link">Experience</a>
       <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#publication" class="mobile-link">Research</a>
       <a href="#education" class="mobile-link">Education</a>
       <a href="#skills" class="mobile-link">Skills</a>
       <a href="#certifications" class="mobile-link">Certs</a>
@@ -96,13 +98,15 @@
           <i class="fas fa-map-marker-alt"></i> Vadodara, Gujarat, India
         </div>
         <div class="hero-buttons reveal">
-          <button class="btn-explore" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+          <a href="assets/Shlok_Sathwara_Resume.docx" download class="btn-explore">
             <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
               stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            Explore Me
-          </button>
+            Download Resume
+          </a>
           <a href="#contact" class="btn-outline">Get In Touch</a>
         </div>
         <div class="hero-social reveal">
@@ -145,7 +149,7 @@
             applications. I've delivered projects ranging from AI budget trackers to adaptive study platforms, and I
             hold an <strong>Oracle APEX Cloud Developer</strong> certification.</p>
           <p>Currently seeking software engineering roles where I can apply my skills in full-stack development, AI
-            integration, and cloud platforms.</p>
+            integration, and cloud platforms. Also available for freelance engagements and open-source collaborations.</p>
         </div>
         <div class="about-stats reveal">
           <div class="stat-card">
@@ -157,7 +161,7 @@
             <span class="stat-label">Projects</span>
           </div>
           <div class="stat-card">
-            <span class="stat-number">7</span>
+            <span class="stat-number">5</span>
             <span class="stat-label">Certifications</span>
           </div>
           <div class="stat-card">
@@ -200,6 +204,11 @@
                 Motion</span><span>Three.js</span><span>Chart.js</span><span>ASP.NET Web API</span><span>Microsoft Entra
                 ID</span>
             </div>
+            <div class="timeline-quote">
+              <i class="fas fa-quote-left"></i>
+              <p>"His dedication, ownership, and professionalism made a positive impact on the project and the team. I am confident he has a bright future ahead in software engineering."</p>
+              <span>— Miteshkumar Mehta, IT Department, Linde Engineering</span>
+            </div>
           </div>
         </div>
         <div class="timeline-item reveal">
@@ -211,9 +220,41 @@
               <span class="timeline-date">Aug 2025 — Present · On-site</span>
             </div>
             <ul class="timeline-list">
-              <li>Ensuring quality standards for university technical events and projects</li>
-              <li>Testing, validation, and process improvement for event management systems</li>
+              <li>QA lead for Aaruush — SRM's annual technical fest (5000+ attendees)</li>
+              <li>Tested and validated event registration, scheduling, and live feedback systems</li>
+              <li>Identified and reported 20+ bugs across web and mobile platforms before launch</li>
+              <li>Implemented automated regression testing for repeatable event workflows</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publication -->
+  <section class="section publication" id="publication">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">PUB</span>
+        <h2 class="section-title">Research Publication</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="pub-card reveal">
+        <div class="pub-card-glow"></div>
+        <div class="pub-content">
+          <div class="pub-badge"><i class="fas fa-file-alt"></i> Peer-Reviewed Paper</div>
+          <h3 class="pub-title">AI-Based Cloud Intrusion Detection System Using Machine Learning</h3>
+          <p class="pub-venue">ICICCS 2026 — International Conference on Intelligent Computing and Communication Systems</p>
+          <p class="pub-desc">Proposed an ML-based intrusion detection system for cloud environments achieving <strong>98.2% accuracy</strong>. Evaluated multiple classifiers (Random Forest, XGBoost, SVM) on the NSL-KDD dataset with feature engineering, cross-validation, and hyperparameter tuning. Addressed class imbalance via SMOTE and compared ensemble strategies for real-time cloud threat detection.</p>
+          <div class="pub-metrics">
+            <span><i class="fas fa-chart-line"></i> 98.2% Accuracy</span>
+            <span><i class="fas fa-database"></i> NSL-KDD Dataset</span>
+            <span><i class="fas fa-cogs"></i> RF, XGBoost, SVM</span>
+            <span><i class="fas fa-check-circle"></i> Accepted 2026</span>
+          </div>
+          <div class="pub-links">
+            <a href="assets/ICICCS-2026_Paper_Accepted.pdf" target="_blank" class="pub-link"><i class="fas fa-external-link-alt"></i> View Acceptance Letter</a>
+            <a href="assets/ICICCS_Paper.docx" download class="pub-link"><i class="fas fa-download"></i> Download Paper</a>
           </div>
         </div>
       </div>
@@ -270,7 +311,7 @@
             </div>
           </div>
           <h3 class="project-title">Lecturn</h3>
-          <p class="project-desc">Mobile-first PWA that transforms lecture slide photos into organized, searchable notes with AI-powered text extraction, smart chapter grouping, semantic search, and audio transcription via Whisper.</p>
+          <p class="project-desc">Mobile-first PWA that transforms lecture slide photos into organized, searchable notes. AI extracts verbatim text via Gemini, groups into chapters by topic detection, and supports semantic search + Whisper audio transcription. Offline-first with sync. Deployed on Vercel + Supabase.</p>
           <div class="project-stack">
             <span>Next.js 15</span><span>React 19</span><span>TypeScript</span><span>FastAPI</span><span>Supabase</span><span>Gemini</span><span>Groq Whisper</span>
           </div>
@@ -286,7 +327,7 @@
             </div>
           </div>
           <h3 class="project-title">Global Deal Finder</h3>
-          <p class="project-desc">AI-powered tool that finds the true cheapest way to buy any product worldwide — comparing local, imported, and traveler-carried prices with card offers, VAT refunds, and sale timing.</p>
+          <p class="project-desc">AI-powered tool that calculates the true cheapest way to buy any product across 7 countries. Compares local, imported, and traveler-carried prices with real card offers, VAT refunds, customs duty, and sale event timing. Full-stack with FastAPI backend + Supabase DB. $0/month infra.</p>
           <div class="project-stack">
             <span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>FastAPI</span><span>Supabase</span><span>Groq</span><span>Gemini</span>
           </div>
@@ -537,40 +578,22 @@
           <p class="cert-date">Oct 2025 — Oct 2027</p>
         </div>
         <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fas fa-database"></i></div>
-          <h3>Database Management System</h3>
-          <p class="cert-issuer">NPTEL</p>
-          <p class="cert-date">Jan 2026</p>
-        </div>
-        <div class="cert-card reveal">
           <div class="cert-icon"><i class="fas fa-java"></i></div>
           <h3>DSA using Java</h3>
           <p class="cert-issuer">NPTEL</p>
           <p class="cert-date">Nov 2025</p>
         </div>
         <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-database"></i></div>
+          <h3>Database Management System</h3>
+          <p class="cert-issuer">NPTEL</p>
+          <p class="cert-date">Jan 2026</p>
+        </div>
+        <div class="cert-card reveal">
           <div class="cert-icon"><i class="fas fa-cubes"></i></div>
           <h3>OOP Fundamentals</h3>
           <p class="cert-issuer">NPTEL</p>
           <p class="cert-date">Apr 2025</p>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
-          <h3>Beginners in C</h3>
-          <p class="cert-issuer">Great Learning</p>
-          <p class="cert-date">Aug 2024</p>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fas fa-terminal"></i></div>
-          <h3>Programming in C</h3>
-          <p class="cert-issuer">Baroda Institute of Technology</p>
-          <p class="cert-date">Jan 2025</p>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fas fa-code"></i></div>
-          <h3>HackTrax 2.0</h3>
-          <p class="cert-issuer">Alexa Developers SRM</p>
-          <p class="cert-date">Certificate of Participation</p>
         </div>
       </div>
     </div>
@@ -618,13 +641,6 @@
           <div class="honor-info">
             <h3>Proficiency in Mathematics</h3>
             <p>Delhi Public School Vadodara · 2017-19</p>
-          </div>
-        </div>
-        <div class="honor-item reveal">
-          <div class="honor-icon"><i class="fas fa-medal"></i></div>
-          <div class="honor-info">
-            <h3>HackTrax 2.0 — Certificate of Participation</h3>
-            <p>Alexa Developers SRM</p>
           </div>
         </div>
       </div>
