@@ -21,7 +21,7 @@ export default function HeroImage() {
     <div ref={ref} className="relative w-full h-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.08] to-sky-500/[0.05] z-[1]" />
       <motion.div
-        className="relative z-[2] w-[340px] h-[440px] sm:w-[380px] sm:h-[480px] md:w-[420px] md:h-[540px] rounded-2xl overflow-hidden"
+        className="relative z-[2] w-[260px] h-[340px] sm:w-[300px] sm:h-[380px] md:w-[380px] md:h-[480px] lg:w-[420px] lg:h-[540px] rounded-2xl overflow-hidden"
         style={{ y: imgY, scale: imgScale }}
       >
         <img
@@ -32,7 +32,7 @@ export default function HeroImage() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/70 via-transparent to-transparent" />
       </motion.div>
       <motion.div
-        className="absolute z-[3] w-[340px] h-[440px] sm:w-[380px] sm:h-[480px] md:w-[420px] md:h-[540px] rounded-2xl pointer-events-none"
+        className="absolute z-[3] w-[260px] h-[340px] sm:w-[300px] sm:h-[380px] md:w-[380px] md:h-[480px] lg:w-[420px] lg:h-[540px] rounded-2xl pointer-events-none"
         style={{
           boxShadow: "0 0 80px 25px rgba(99,102,241,0.25), 0 0 150px 50px rgba(14,165,233,0.1)",
           opacity: glowOpacity,

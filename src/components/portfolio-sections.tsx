@@ -114,36 +114,36 @@ export default function PortfolioSections() {
       </div>
 
       {/* Hero */}
-      <section className="hero-section relative z-10 flex min-h-screen overflow-hidden" id="hero">
-        <div className="flex-1 flex items-center py-24 px-8 md:px-16 lg:px-20 bg-[rgba(255,255,255,0.02)] relative">
+      <section className="hero-section relative z-10 flex flex-col md:flex-row min-h-screen overflow-hidden" id="hero">
+        <div className="flex-1 flex items-center py-20 md:py-24 px-5 md:px-16 lg:px-20 bg-[rgba(255,255,255,0.02)] relative">
           <div className="max-w-[560px]">
-            <div className="inline-block px-4 py-1.5 bg-indigo-500/[0.08] border border-indigo-500/[0.15] rounded-full text-xs font-semibold text-indigo-400 tracking-[0.05em] uppercase mb-6" data-aos="fade-up" data-aos-delay="0">Aspiring Software Engineer</div>
-            <h1 className="font-[family-name:var(--font-space-grotesk)] mb-6" data-aos="fade-up" data-aos-delay="100">
-              <span className="hero-name block text-4xl sm:text-5xl md:text-[4.5rem] font-black leading-[1.05] tracking-[-0.03em] text-white">Shlok</span>
-              <span className="hero-name block text-4xl sm:text-5xl md:text-[4.5rem] font-black leading-[1.05] tracking-[-0.03em] text-gradient-sky">Sathwara</span>
+            <div className="inline-block px-4 py-1.5 bg-indigo-500/[0.08] border border-indigo-500/[0.15] rounded-full text-xs font-semibold text-indigo-400 tracking-[0.05em] uppercase mb-4 md:mb-6" data-aos="fade-up" data-aos-delay="0">Aspiring Software Engineer</div>
+            <h1 className="font-[family-name:var(--font-space-grotesk)] mb-4 md:mb-6" data-aos="fade-up" data-aos-delay="100">
+              <span className="hero-name block text-3xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-black leading-[1.05] tracking-[-0.03em] text-white">Shlok</span>
+              <span className="hero-name block text-3xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-black leading-[1.05] tracking-[-0.03em] text-gradient-sky">Sathwara</span>
             </h1>
-            <p className="text-lg text-gray-400 leading-relaxed mb-4 max-w-[440px]" data-aos="fade-up" data-aos-delay="200">Computer Science & Technology at SRMIST. Focused on DSA, Java, AI Integration, and building AI-powered apps. CGPA: 9.44</p>
-            <div className="text-base text-gray-400 mb-10 min-h-[1.5rem]" data-aos="fade-up" data-aos-delay="300">
+            <p className="text-base md:text-lg text-gray-400 leading-relaxed mb-4 max-w-[440px]" data-aos="fade-up" data-aos-delay="200">Computer Science & Technology at SRMIST. Focused on DSA, Java, AI Integration, and building AI-powered apps. CGPA: 9.44</p>
+            <div className="text-sm md:text-base text-gray-400 mb-6 md:mb-10 min-h-[1.5rem]" data-aos="fade-up" data-aos-delay="300">
               <span className="text-gray-400">I build </span>
               <span className="text-indigo-400 font-semibold" ref={typingRef}></span>
               <span className="text-indigo-400 font-light animate-[blink_0.8s_step-end_infinite]">|</span>
             </div>
-            <div className="text-sm text-gray-400 mb-10 flex items-center gap-2" data-aos="fade-up" data-aos-delay="350"><MapPin className="w-4 h-4 text-rose-500" /> Vadodara, Gujarat, India</div>
-            <div className="flex gap-4 mb-10" data-aos="fade-up" data-aos-delay="400">
-              <a href="/Resume_2608.pdf" download className="btn-explore flex items-center justify-center gap-2.5 text-xs font-semibold uppercase tracking-[0.4px] text-indigo-300 bg-white/[0.06] border border-white/[0.08] rounded-full py-4 px-7 hover:text-white hover:bg-indigo-500/20 hover:border-indigo-500/30 hover:-translate-y-0.5 transition-all duration-200">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <div className="text-xs md:text-sm text-gray-400 mb-6 md:mb-10 flex items-center gap-2" data-aos="fade-up" data-aos-delay="350"><MapPin className="w-4 h-4 text-rose-500" /> Vadodara, Gujarat, India</div>
+            <div className="flex flex-wrap gap-3 md:gap-4 mb-6 md:mb-10" data-aos="fade-up" data-aos-delay="400">
+              <a href="/Resume_2608.pdf" download className="btn-explore flex items-center justify-center gap-2.5 text-[0.65rem] md:text-xs font-semibold uppercase tracking-[0.4px] text-indigo-300 bg-white/[0.06] border border-white/[0.08] rounded-full py-3 px-5 md:py-4 md:px-7 hover:text-white hover:bg-indigo-500/20 hover:border-indigo-500/30 hover:-translate-y-0.5 transition-all duration-200">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download Resume
               </a>
-              <a href="#contact" className="btn-outline inline-flex items-center justify-center py-4 px-7 rounded-full text-xs font-semibold uppercase tracking-[0.4px] text-white border border-white/[0.06] bg-transparent hover:border-indigo-500 hover:text-indigo-400 hover:-translate-y-0.5 transition-all duration-300">Get In Touch</a>
+              <a href="#contact" className="btn-outline inline-flex items-center justify-center py-3 px-5 md:py-4 md:px-7 rounded-full text-[0.65rem] md:text-xs font-semibold uppercase tracking-[0.4px] text-white border border-white/[0.06] bg-transparent hover:border-indigo-500 hover:text-indigo-400 hover:-translate-y-0.5 transition-all duration-300">Get In Touch</a>
             </div>
-            <div className="flex gap-4" data-aos="fade-up" data-aos-delay="500">
+            <div className="flex gap-3 md:gap-4" data-aos="fade-up" data-aos-delay="500">
               {[{icon:<GithubIcon className="w-5 h-5" />,url:"https://github.com/ShlokSathwara2"},{icon:<LinkedinIcon className="w-5 h-5" />,url:"https://www.linkedin.com/in/shlok-sathwara-4b91ab319/"},{icon:<Code2 className="w-5 h-5" />,url:"https://leetcode.com/u/Shlok_Sathwara/"}].map((s) => (
-                <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className="social-link w-[42px] h-[42px] flex items-center justify-center rounded-full bg-white/[0.06] border border-white/[0.06] text-gray-400 text-base hover:text-indigo-400 hover:border-indigo-500 hover:-translate-y-0.5 transition-all duration-300">{s.icon}</a>
+                <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className="social-link w-10 h-10 md:w-[42px] md:h-[42px] flex items-center justify-center rounded-full bg-white/[0.06] border border-white/[0.06] text-gray-400 text-base hover:text-indigo-400 hover:border-indigo-500 hover:-translate-y-0.5 transition-all duration-300">{s.icon}</a>
               ))}
             </div>
           </div>
         </div>
-        <div className="flex-1 flex items-center justify-center bg-[#0a0a0f] relative overflow-hidden">
+        <div className="flex-1 flex items-center justify-center bg-[#0a0a0f] relative overflow-hidden min-h-[50vh] md:min-h-0">
           <HeroImage />
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-[2]">
@@ -153,35 +153,35 @@ export default function PortfolioSections() {
       </section>
 
       {/* About - Bento Grid */}
-      <section className="relative z-10 py-24" id="about">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="about">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">01</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">About Me</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">About Me</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="grid grid-cols-3 gap-4" data-aos="fade-up">
-            <div className="col-span-2 row-span-2 glass spotlight-card rounded-2xl p-8 flex flex-col justify-center" data-aos="fade-up">
-              <p className="text-[1.05rem] text-gray-400 mb-5 leading-[1.8]">I&apos;m a Computer Science & Technology student at SRMIST with a CGPA of <strong className="text-white">9.44</strong>, passionate about building impactful digital products. From leading a team at <strong className="text-white">Linde Engineering</strong> to building AI-powered tools, I thrive at the intersection of design and engineering.</p>
-              <p className="text-[1.05rem] text-gray-400 mb-5 leading-[1.8]">My focus areas are <strong className="text-white">DSA & Java</strong>, <strong className="text-white">AI Integration</strong>, and building full-stack applications. I&apos;ve delivered projects ranging from AI budget trackers to adaptive study platforms, and I hold an <strong className="text-white">Oracle APEX Cloud Developer</strong> certification.</p>
-              <p className="text-[1.05rem] text-gray-400 leading-[1.8]">Currently seeking software engineering roles where I can apply my skills in full-stack development, AI integration, and cloud platforms. Also available for freelance engagements and open-source collaborations.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-aos="fade-up">
+            <div className="md:col-span-2 md:row-span-2 glass spotlight-card rounded-2xl p-5 md:p-8 flex flex-col justify-center" data-aos="fade-up">
+              <p className="text-sm md:text-[1.05rem] text-gray-400 mb-4 md:mb-5 leading-[1.7] md:leading-[1.8]">I&apos;m a Computer Science & Technology student at SRMIST with a CGPA of <strong className="text-white">9.44</strong>, passionate about building impactful digital products. From leading a team at <strong className="text-white">Linde Engineering</strong> to building AI-powered tools, I thrive at the intersection of design and engineering.</p>
+              <p className="text-sm md:text-[1.05rem] text-gray-400 mb-4 md:mb-5 leading-[1.7] md:leading-[1.8]">My focus areas are <strong className="text-white">DSA & Java</strong>, <strong className="text-white">AI Integration</strong>, and building full-stack applications. I&apos;ve delivered projects ranging from AI budget trackers to adaptive study platforms, and I hold an <strong className="text-white">Oracle APEX Cloud Developer</strong> certification.</p>
+              <p className="text-sm md:text-[1.05rem] text-gray-400 leading-[1.7] md:leading-[1.8]">Currently seeking software engineering roles where I can apply my skills in full-stack development, AI integration, and cloud platforms. Also available for freelance engagements and open-source collaborations.</p>
             </div>
-            <div className="glass spotlight-card rounded-2xl p-6 flex flex-col items-center justify-center text-center" data-aos="fade-up" data-aos-delay="100">
-              <span className="stat-number block font-[family-name:var(--font-space-grotesk)] text-[3rem] font-extrabold text-gradient-indigo">9.44</span>
-              <span className="text-sm text-gray-400 uppercase tracking-[0.05em]">CGPA</span>
+            <div className="glass spotlight-card rounded-2xl p-5 md:p-6 flex flex-col items-center justify-center text-center" data-aos="fade-up" data-aos-delay="100">
+              <span className="stat-number block font-[family-name:var(--font-space-grotesk)] text-[2.5rem] md:text-[3rem] font-extrabold text-gradient-indigo">9.44</span>
+              <span className="text-xs md:text-sm text-gray-400 uppercase tracking-[0.05em]">CGPA</span>
             </div>
-            <div className="glass spotlight-card rounded-2xl p-6 flex flex-col items-center justify-center text-center" data-aos="fade-up" data-aos-delay="150">
-              <span className="stat-number block font-[family-name:var(--font-space-grotesk)] text-[2.5rem] font-extrabold text-gradient-sky">10+</span>
-              <span className="text-sm text-gray-400 uppercase tracking-[0.05em]">Projects</span>
+            <div className="glass spotlight-card rounded-2xl p-5 md:p-6 flex flex-col items-center justify-center text-center" data-aos="fade-up" data-aos-delay="150">
+              <span className="stat-number block font-[family-name:var(--font-space-grotesk)] text-[2rem] md:text-[2.5rem] font-extrabold text-gradient-sky">10+</span>
+              <span className="text-xs md:text-sm text-gray-400 uppercase tracking-[0.05em]">Projects</span>
             </div>
-            <div className="col-span-2 grid grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="glass spotlight-card rounded-2xl p-6 flex flex-col items-center justify-center text-center">
-                <span className="stat-number block font-[family-name:var(--font-space-grotesk)] text-[2.5rem] font-extrabold text-gradient-indigo">7</span>
-                <span className="text-sm text-gray-400 uppercase tracking-[0.05em]">Certifications</span>
+            <div className="md:col-span-2 grid grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="200">
+              <div className="glass spotlight-card rounded-2xl p-5 md:p-6 flex flex-col items-center justify-center text-center">
+                <span className="stat-number block font-[family-name:var(--font-space-grotesk)] text-[2rem] md:text-[2.5rem] font-extrabold text-gradient-indigo">7</span>
+                <span className="text-xs md:text-sm text-gray-400 uppercase tracking-[0.05em]">Certifications</span>
               </div>
-              <div className="glass spotlight-card rounded-2xl p-6 flex flex-col items-center justify-center text-center">
-                <span className="stat-number block font-[family-name:var(--font-space-grotesk)] text-[2.5rem] font-extrabold text-gradient-sky">2</span>
-                <span className="text-sm text-gray-400 uppercase tracking-[0.05em]">Experiences</span>
+              <div className="glass spotlight-card rounded-2xl p-5 md:p-6 flex flex-col items-center justify-center text-center">
+                <span className="stat-number block font-[family-name:var(--font-space-grotesk)] text-[2rem] md:text-[2.5rem] font-extrabold text-gradient-sky">2</span>
+                <span className="text-xs md:text-sm text-gray-400 uppercase tracking-[0.05em]">Experiences</span>
               </div>
             </div>
           </div>
@@ -189,18 +189,18 @@ export default function PortfolioSections() {
       </section>
 
       {/* Experience */}
-      <section className="relative z-10 py-24" id="experience">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="experience">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">02</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Experience</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Experience</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="relative pl-10">
+          <div className="relative pl-8 md:pl-10">
             <div className="absolute left-[6px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-indigo-500 via-purple-500 to-transparent rounded-[2px]"></div>
-            <div className="relative mb-12 reveal" data-aos="fade-up">
-              <div className="absolute left-[-2.5rem] top-[0.5rem] w-[14px] h-[14px] rounded-full bg-indigo-500 border-[3px] border-[#0a0a0f] shadow-[0_0_0_3px_rgba(99,102,241,0.2)]"></div>
-              <div className="glass spotlight-card rounded-2xl p-8 hover:-translate-y-0.5 hover:shadow-card-md transition-all duration-300">
+            <div className="relative mb-10 md:mb-12 reveal" data-aos="fade-up">
+              <div className="absolute left-[-2rem] md:left-[-2.5rem] top-[0.5rem] w-[12px] md:w-[14px] h-[12px] md:h-[14px] rounded-full bg-indigo-500 border-[3px] border-[#0a0a0f] shadow-[0_0_0_3px_rgba(99,102,241,0.2)]"></div>
+              <div className="glass spotlight-card rounded-2xl p-5 md:p-8 hover:-translate-y-0.5 hover:shadow-card-md transition-all duration-300">
                 <div className="mb-4">
                   <h3 className="font-[family-name:var(--font-space-grotesk)] text-xl font-bold mb-1 text-white">Team Lead — Helpdesk Portal Redesign</h3>
                   <span className="block text-sm text-indigo-400 font-medium">Linde Engineering India Pvt. Ltd.</span>
@@ -242,53 +242,53 @@ export default function PortfolioSections() {
       </section>
 
       {/* Publication */}
-      <section className="relative z-10 py-24" id="publication">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="publication">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">PUB</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Research Publication</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Research Publication</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="relative glass spotlight-card rounded-2xl p-10 overflow-hidden reveal" data-aos="fade-up">
+          <div className="relative glass spotlight-card rounded-2xl p-5 md:p-10 overflow-hidden reveal" data-aos="fade-up">
             <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.04)_0%,transparent_50%)] pointer-events-none"></div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-sky-500/[0.08] border border-sky-500/[0.15] rounded-full text-xs font-semibold text-sky-400 uppercase tracking-[0.05em] mb-4">Peer-Reviewed Paper</div>
-            <h3 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-extrabold mb-2 leading-snug text-white">AI-Based Cloud Intrusion Detection System Using Machine Learning</h3>
-            <p className="text-sm text-indigo-400 font-medium mb-4">ICICCS 2026 — International Conference on Intelligent Computing and Communication Systems</p>
-            <p className="text-[0.95rem] text-gray-400 leading-relaxed mb-6 max-w-[750px]">Proposed an ML-based intrusion detection system for cloud environments achieving <strong className="text-white">98.2% accuracy</strong>. Evaluated multiple classifiers (Random Forest, XGBoost, SVM) on the NSL-KDD dataset with feature engineering, cross-validation, and hyperparameter tuning. Addressed class imbalance via SMOTE and compared ensemble strategies for real-time cloud threat detection.</p>
-            <div className="flex flex-wrap gap-3 mb-6">
+            <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 bg-sky-500/[0.08] border border-sky-500/[0.15] rounded-full text-[0.65rem] md:text-xs font-semibold text-sky-400 uppercase tracking-[0.05em] mb-3 md:mb-4">Peer-Reviewed Paper</div>
+            <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-2xl font-extrabold mb-2 leading-snug text-white">AI-Based Cloud Intrusion Detection System Using Machine Learning</h3>
+            <p className="text-[0.7rem] md:text-sm text-indigo-400 font-medium mb-3 md:mb-4">ICICCS 2026 — International Conference on Intelligent Computing and Communication Systems</p>
+            <p className="text-[0.8rem] md:text-[0.95rem] text-gray-400 leading-relaxed mb-4 md:mb-6 max-w-[750px]">Proposed an ML-based intrusion detection system for cloud environments achieving <strong className="text-white">98.2% accuracy</strong>. Evaluated multiple classifiers (Random Forest, XGBoost, SVM) on the NSL-KDD dataset with feature engineering, cross-validation, and hyperparameter tuning. Addressed class imbalance via SMOTE and compared ensemble strategies for real-time cloud threat detection.</p>
+            <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
               {["98.2% Accuracy","NSL-KDD Dataset","RF, XGBoost, SVM","Accepted 2026"].map((m) => (
-                <span key={m} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.1] rounded-full text-xs font-medium text-indigo-400">{m}</span>
+                <span key={m} className="inline-flex items-center gap-1 md:gap-1.5 px-2.5 md:px-3.5 py-1 md:py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.1] rounded-full text-[0.6rem] md:text-xs font-medium text-indigo-400">{m}</span>
               ))}
             </div>
-            <div className="flex gap-4 flex-wrap">
-              <a href="/ICICCS-2026_Paper_Accepted.pdf" target="_blank" className="pub-link inline-flex items-center gap-1.5 px-5 py-2.5 bg-white/10 text-white rounded-full text-xs font-semibold hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06]">View Acceptance Letter</a>
-              <a href="/ICICCS_Paper.docx" download className="pub-link inline-flex items-center gap-1.5 px-5 py-2.5 bg-white/10 text-white rounded-full text-xs font-semibold hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06]">Download Paper</a>
+            <div className="flex gap-3 md:gap-4 flex-wrap">
+              <a href="/ICICCS-2026_Paper_Accepted.pdf" target="_blank" className="pub-link inline-flex items-center gap-1.5 px-4 md:px-5 py-2 md:py-2.5 bg-white/10 text-white rounded-full text-[0.65rem] md:text-xs font-semibold hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06]">View Acceptance Letter</a>
+              <a href="/ICICCS_Paper.docx" download className="pub-link inline-flex items-center gap-1.5 px-4 md:px-5 py-2 md:py-2.5 bg-white/10 text-white rounded-full text-[0.65rem] md:text-xs font-semibold hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06]">Download Paper</a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Currently Building */}
-      <section className="relative z-10 py-24" id="building">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="building">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">WIP</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Currently Building</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Currently Building</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="relative glass spotlight-card rounded-2xl p-10 overflow-hidden reveal" data-aos="fade-up">
+          <div className="relative glass spotlight-card rounded-2xl p-5 md:p-10 overflow-hidden reveal" data-aos="fade-up">
             <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.04)_0%,transparent_50%)] pointer-events-none"></div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-rose-500/[0.08] border border-rose-500/[0.15] rounded-full text-xs font-semibold text-rose-400 uppercase tracking-[0.05em] mb-4">In Progress</div>
-            <h3 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-extrabold mb-3 text-white">FRIDAY — AI Voice Assistant</h3>
-            <p className="text-[0.95rem] text-gray-400 leading-relaxed mb-6 max-w-[700px]">A full-featured personal AI assistant with voice biometric authentication, emotion detection, multi-model intelligence (Gemini + Ollama), RAG pipeline, screen OCR, smart home control, encrypted vault, and proactive scheduling. Built with Python, featuring a plugin architecture and event-driven module communication.</p>
-            <div className="flex flex-wrap gap-3 mb-6">
+            <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 bg-rose-500/[0.08] border border-rose-500/[0.15] rounded-full text-[0.65rem] md:text-xs font-semibold text-rose-400 uppercase tracking-[0.05em] mb-3 md:mb-4">In Progress</div>
+            <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-2xl font-extrabold mb-2 md:mb-3 text-white">FRIDAY — AI Voice Assistant</h3>
+            <p className="text-[0.8rem] md:text-[0.95rem] text-gray-400 leading-relaxed mb-4 md:mb-6 max-w-[700px]">A full-featured personal AI assistant with voice biometric authentication, emotion detection, multi-model intelligence (Gemini + Ollama), RAG pipeline, screen OCR, smart home control, encrypted vault, and proactive scheduling. Built with Python, featuring a plugin architecture and event-driven module communication.</p>
+            <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
               {["Voice & Wake Word","Gemini + Ollama AI","Screen OCR & Vision","Face Auth & Vault","Smart Home Control","Smart Scheduling"].map((f) => (
-                <span key={f} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.1] rounded-full text-xs font-medium text-indigo-400">{f}</span>
+                <span key={f} className="inline-flex items-center gap-1 md:gap-1.5 px-2.5 md:px-3.5 py-1 md:py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.1] rounded-full text-[0.6rem] md:text-xs font-medium text-indigo-400">{f}</span>
               ))}
             </div>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-1 md:gap-1.5">
               {["Python","Gemini","Ollama","Whisper","OpenCV","Tesseract","SQLite","FastAPI"].map((t) => (
-                <span key={t} className="px-2.5 py-1 bg-sky-500/[0.06] border border-sky-500/[0.1] rounded-full text-[0.7rem] font-medium text-sky-400">{t}</span>
+                <span key={t} className="px-2 md:px-2.5 py-0.5 md:py-1 bg-sky-500/[0.06] border border-sky-500/[0.1] rounded-full text-[0.6rem] md:text-[0.7rem] font-medium text-sky-400">{t}</span>
               ))}
             </div>
           </div>
@@ -296,14 +296,14 @@ export default function PortfolioSections() {
       </section>
 
       {/* Projects */}
-      <section className="relative z-10 py-24" id="projects">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="projects">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">03</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Projects</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Projects</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               { icon:<Code2 className="w-7 h-7 text-indigo-400" />, title:"Threshold Website", desc:"Official web experience for Threshold — a modern, fast, student-focused website showcasing attendance, marks, CGPA, exams, timetable.", stack:["React","UI/UX","Frontend","Responsive"], featured:true, image:"/threshold-website.jpg" },
               { icon:<Camera className="w-7 h-7 text-indigo-400" />, title:"Lecturn", desc:"Mobile-first PWA that transforms lecture slide photos into organized, searchable notes. AI extracts verbatim text via Gemini, groups into chapters, supports semantic search + Whisper audio transcription. Offline-first with sync.", stack:["Next.js 15","React 19","TypeScript","FastAPI","Supabase","Gemini","Groq Whisper"], featured:true, link:"https://lecturn-app.vercel.app", github:"https://github.com/ShlokSathwara2/Lecturn" },
@@ -319,20 +319,20 @@ export default function PortfolioSections() {
               { icon:<School className="w-7 h-7 text-indigo-400" />, title:"College Database System", desc:"DBMS mini-project with MySQL. Normalization, CRUD operations, and comprehensive data management.", stack:["MySQL","JavaScript","Node.js"], featured:false, github:"https://github.com/ShlokSathwara2/College-Database-System" },
             ].map((p, i) => (
               <div key={p.title} onClick={p.title === "Threshold Website" ? () => setModal({ open: true, title: "Threshold Website", type: "image", src: "/threshold-website.jpg" }) : p.title === "Threshold" ? () => setModal({ open: true, title: "Threshold APK", type: "image", src: "/threshold-apk.jpg" }) : undefined} data-aos="fade-up" data-aos-delay={Math.min(i * 50, 300)} className={`project-card spotlight-card glass ${p.featured ? "border-indigo-500/20 bg-gradient-to-br from-indigo-500/[0.02] to-sky-500/[0.02]" : ""} rounded-2xl transition-all duration-300 hover:shadow-card-lg hover:border-indigo-500/15 overflow-hidden group reveal ${(p.title === "Threshold Website" || p.title === "Threshold") ? "cursor-pointer" : ""}`}>
-                {p.image && <div className="w-full h-48 overflow-hidden"><img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>}
-                <div className="p-8">
-                  <div className="flex justify-between items-center mb-5">
-                    <span className="text-[1.8rem]">{p.icon}</span>
-                    <div className="flex gap-3">
-                      {p.link && <a href={p.link} target="_blank" rel="noopener noreferrer" className="w-[34px] h-[34px] flex items-center justify-center rounded-full bg-indigo-500/[0.06] text-gray-400 text-[0.85rem] hover:bg-indigo-500 hover:text-white transition-all"><ExternalLink className="w-4 h-4" /></a>}
-                      {p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="w-[34px] h-[34px] flex items-center justify-center rounded-full bg-indigo-500/[0.06] text-gray-400 text-[0.85rem] hover:bg-indigo-500 hover:text-white transition-all"><GithubIcon className="w-4 h-4" /></a>}
+                {p.image && <div className="w-full h-36 md:h-48 overflow-hidden"><img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>}
+                <div className="p-5 md:p-8">
+                  <div className="flex justify-between items-center mb-3 md:mb-5">
+                    <span className="text-1.3rem md:text-[1.8rem]">{p.icon}</span>
+                    <div className="flex gap-2 md:gap-3">
+                      {p.link && <a href={p.link} target="_blank" rel="noopener noreferrer" className="w-[28px] md:w-[34px] h-[28px] md:h-[34px] flex items-center justify-center rounded-full bg-indigo-500/[0.06] text-gray-400 text-[0.75rem] md:text-[0.85rem] hover:bg-indigo-500 hover:text-white transition-all"><ExternalLink className="w-3.5 h-3.5 md:w-4 md:h-4" /></a>}
+                      {p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="w-[28px] md:w-[34px] h-[28px] md:h-[34px] flex items-center justify-center rounded-full bg-indigo-500/[0.06] text-gray-400 text-[0.75rem] md:text-[0.85rem] hover:bg-indigo-500 hover:text-white transition-all"><GithubIcon className="w-3.5 h-3.5 md:w-4 md:h-4" /></a>}
                     </div>
                   </div>
-                  <h3 className="font-[family-name:var(--font-space-grotesk)] text-xl font-bold mb-3 text-white">{p.title}</h3>
-                  <p className="text-[0.88rem] text-gray-400 leading-[1.7] mb-5">{p.desc}</p>
-                  <div className="flex flex-wrap gap-1.5">
+                  <h3 className="font-[family-name:var(--font-space-grotesk)] text-base md:text-xl font-bold mb-2 md:mb-3 text-white">{p.title}</h3>
+                  <p className="text-[0.75rem] md:text-[0.88rem] text-gray-400 leading-[1.6] md:leading-[1.7] mb-4 md:mb-5">{p.desc}</p>
+                  <div className="flex flex-wrap gap-1 md:gap-1.5">
                     {p.stack.map((t) => (
-                      <span key={t} className="px-2.5 py-1 bg-sky-500/[0.06] border border-sky-500/[0.1] rounded-full text-[0.7rem] font-medium text-sky-400">{t}</span>
+                      <span key={t} className="px-2 md:px-2.5 py-0.5 md:py-1 bg-sky-500/[0.06] border border-sky-500/[0.1] rounded-full text-[0.55rem] md:text-[0.7rem] font-medium text-sky-400">{t}</span>
                     ))}
                   </div>
                 </div>
@@ -343,27 +343,27 @@ export default function PortfolioSections() {
       </section>
 
       {/* Education */}
-      <section className="relative z-10 py-24" id="education">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="education">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">04</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Education</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Education</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4 md:gap-6">
             {[
               { school:"SRM Institute of Science and Technology (SRMIST)", degree:"B.Tech — Computer Science and Technology", date:"Aug 2024 — Jun 2028", cgpa:"9.44", detail:"Sem 1: 9.33 · Sem 2: 9.48 · Sem 3: 9.2 · Sem 4: 9.7", icon:<Building2 className="w-5 h-5 text-indigo-400" /> },
               { school:"Delhi Public School Vadodara", degree:"Higher Secondary Education", date:"Apr 2009 — May 2022", detail:"Proficiency in English (2021-22), Mathematics (2017-19)", icon:<School className="w-5 h-5 text-indigo-400" /> },
             ].map((e, i) => (
-              <div key={e.school} data-aos="fade-up" data-aos-delay={i * 100} className="education-card spotlight-card glass flex gap-6 rounded-2xl p-8 hover:-translate-y-[3px] hover:shadow-card-md transition-all duration-300 reveal">
-                <div className="w-[50px] h-[50px] rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 flex items-center justify-center flex-shrink-0"><span className="text-indigo-400 text-xl">{e.icon}</span></div>
+              <div key={e.school} data-aos="fade-up" data-aos-delay={i * 100} className="education-card spotlight-card glass flex gap-4 md:gap-6 rounded-2xl p-5 md:p-8 hover:-translate-y-[3px] hover:shadow-card-md transition-all duration-300 reveal">
+                <div className="w-[42px] md:w-[50px] h-[42px] md:h-[50px] rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 flex items-center justify-center flex-shrink-0"><span className="text-indigo-400 text-lg md:text-xl">{e.icon}</span></div>
                 <div>
-                  <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg font-bold mb-1 text-white">{e.school}</h3>
-                  <p className="text-sm text-indigo-400 font-medium">{e.degree}</p>
-                  <p className="text-xs text-gray-500 mt-0.5">{e.date}</p>
-                  <div className="flex items-center gap-3 mt-3 flex-wrap">
-                    {e.cgpa && <span className="inline-block px-3 py-1 bg-gradient-to-br from-indigo-500 to-purple-500 text-white rounded-full text-xs font-semibold">CGPA: {e.cgpa}</span>}
-                    <span className="text-xs text-gray-400">{e.detail}</span>
+                  <h3 className="font-[family-name:var(--font-space-grotesk)] text-base md:text-lg font-bold mb-1 text-white">{e.school}</h3>
+                  <p className="text-xs md:text-sm text-indigo-400 font-medium">{e.degree}</p>
+                  <p className="text-[0.7rem] md:text-xs text-gray-500 mt-0.5">{e.date}</p>
+                  <div className="flex items-center gap-2 md:gap-3 mt-2 md:mt-3 flex-wrap">
+                    {e.cgpa && <span className="inline-block px-2.5 md:px-3 py-1 bg-gradient-to-br from-indigo-500 to-purple-500 text-white rounded-full text-[0.65rem] md:text-xs font-semibold">CGPA: {e.cgpa}</span>}
+                    <span className="text-[0.65rem] md:text-xs text-gray-400">{e.detail}</span>
                   </div>
                 </div>
               </div>
@@ -373,14 +373,14 @@ export default function PortfolioSections() {
       </section>
 
       {/* Skills */}
-      <section className="relative z-10 py-24" id="skills">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="skills">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">05</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Skills</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Skills</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               { title:"Frontend", icon:<Layout className="w-5 h-5 text-indigo-400" />, skills:["React","Next.js","TypeScript","Tailwind CSS","Framer Motion","Three.js","HTML/CSS"] },
               { title:"Backend", icon:<Server className="w-5 h-7 text-indigo-400" />, skills:["Node.js","Express",".NET","ASP.NET Web API","Python","Java","Flask"] },
@@ -389,11 +389,11 @@ export default function PortfolioSections() {
               { title:"AI & ML", icon:<Bot className="w-5 h-5 text-indigo-400" />, skills:["Gemini API","Groq","Ollama","AI Integration","Spaced Repetition"] },
               { title:"Languages & Tools", icon:<Wrench className="w-5 h-5 text-indigo-400" />, skills:["Java","Python","C","JavaScript","DSA","Streamlit","OpenPyXL"] },
             ].map((c, i) => (
-              <div key={c.title} data-aos="fade-up" data-aos-delay={i * 80} className="skill-category spotlight-card glass rounded-2xl p-7 hover:-translate-y-[3px] hover:shadow-card-md transition-all duration-300 reveal">
-                <h3 className="font-[family-name:var(--font-space-grotesk)] text-base font-bold mb-4 flex items-center gap-2.5 text-white"><span>{c.icon}</span> {c.title}</h3>
+              <div key={c.title} data-aos="fade-up" data-aos-delay={i * 80} className="skill-category spotlight-card glass rounded-2xl p-5 md:p-7 hover:-translate-y-[3px] hover:shadow-card-md transition-all duration-300 reveal">
+                <h3 className="font-[family-name:var(--font-space-grotesk)] text-sm md:text-base font-bold mb-3 md:mb-4 flex items-center gap-2 md:gap-2.5 text-white"><span>{c.icon}</span> {c.title}</h3>
                 <div className="flex flex-wrap gap-1.5">
                   {c.skills.map((s) => (
-                    <span key={s} className="px-3 py-1.5 bg-white/[0.04] border border-white/[0.06] rounded-full text-xs font-medium text-gray-400 hover:border-indigo-500/15 hover:text-indigo-400 transition-all">{s}</span>
+                    <span key={s} className="px-2.5 md:px-3 py-1 md:py-1.5 bg-white/[0.04] border border-white/[0.06] rounded-full text-[0.65rem] md:text-xs font-medium text-gray-400 hover:border-indigo-500/15 hover:text-indigo-400 transition-all">{s}</span>
                   ))}
                 </div>
               </div>
@@ -403,28 +403,28 @@ export default function PortfolioSections() {
       </section>
 
       {/* Certifications */}
-      <section className="relative z-10 py-24" id="certifications">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="certifications">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">06</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Certifications</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Certifications</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {[
-              { icon:<Cloud className="w-5 h-5 text-indigo-400" />, title:"Oracle APEX Cloud Developer", issuer:"Oracle", date:"Oct 2025 — Oct 2027", pdf:"/Oracle_APEX_Cert.pdf" },
-              { icon:<Code2 className="w-5 h-5 text-indigo-400" />, title:"DSA using Java", issuer:"NPTEL", date:"Nov 2025", pdf:"/NPTEL_DSA_Java.pdf" },
-              { icon:<Database className="w-5 h-5 text-indigo-400" />, title:"Database Management System", issuer:"NPTEL", date:"Jan 2026", pdf:"/NPTEL_DBMS.pdf" },
-              { icon:<Cog className="w-5 h-5 text-indigo-400" />, title:"OOP Fundamentals", issuer:"NPTEL", date:"Apr 2025", pdf:"/NPTEL_OOP.pdf" },
-              { icon:<Code2 className="w-5 h-5 text-indigo-400" />, title:"C For Beginners", issuer:"Great Learning", date:"Aug 2024", pdf:"/Great_Learning_C.pdf" },
-              { icon:<Trophy className="w-5 h-5 text-indigo-400" />, title:"HackTrax 2.0", issuer:"Alexa Developers SRM", date:"Hackathon Participation", pdf:"/HackTrax_Certificate.pdf" },
-              { icon:<Code2 className="w-5 h-5 text-indigo-400" />, title:"Programming in C", issuer:"Baroda Institute of Technology", date:"Apr 2025", pdf:"/C_Language_BIT_Cert.pdf" },
+              { icon:<Cloud className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"Oracle APEX Cloud Developer", issuer:"Oracle", date:"Oct 2025 — Oct 2027", pdf:"/Oracle_APEX_Cert.pdf" },
+              { icon:<Code2 className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"DSA using Java", issuer:"NPTEL", date:"Nov 2025", pdf:"/NPTEL_DSA_Java.pdf" },
+              { icon:<Database className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"Database Management System", issuer:"NPTEL", date:"Jan 2026", pdf:"/NPTEL_DBMS.pdf" },
+              { icon:<Cog className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"OOP Fundamentals", issuer:"NPTEL", date:"Apr 2025", pdf:"/NPTEL_OOP.pdf" },
+              { icon:<Code2 className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"C For Beginners", issuer:"Great Learning", date:"Aug 2024", pdf:"/Great_Learning_C.pdf" },
+              { icon:<Trophy className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"HackTrax 2.0", issuer:"Alexa Developers SRM", date:"Hackathon Participation", pdf:"/HackTrax_Certificate.pdf" },
+              { icon:<Code2 className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"Programming in C", issuer:"Baroda Institute of Technology", date:"Apr 2025", pdf:"/C_Language_BIT_Cert.pdf" },
             ].map((c, i) => (
-              <a key={c.title} href={c.pdf} target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay={Math.min(i * 50, 300)} className="cert-card spotlight-card glass rounded-2xl p-7 text-center hover:-translate-y-[3px] hover:shadow-card-md hover:border-indigo-500/15 transition-all duration-300 reveal cursor-pointer">
-                <div className="w-[50px] h-[50px] mx-auto mb-4 rounded-xl bg-gradient-to-br from-indigo-500/10 to-sky-500/10 flex items-center justify-center"><span className="text-indigo-400 text-xl">{c.icon}</span></div>
-                <h3 className="font-[family-name:var(--font-space-grotesk)] text-[0.95rem] font-bold mb-1 text-white">{c.title}</h3>
-                <p className="text-sm text-indigo-400 font-medium mb-0.5">{c.issuer}</p>
-                <p className="text-[0.78rem] text-gray-500">{c.date}</p>
+              <a key={c.title} href={c.pdf} target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay={Math.min(i * 50, 300)} className="cert-card spotlight-card glass rounded-2xl p-4 md:p-7 text-center hover:-translate-y-[3px] hover:shadow-card-md hover:border-indigo-500/15 transition-all duration-300 reveal cursor-pointer">
+                <div className="w-[38px] md:w-[50px] h-[38px] md:h-[50px] mx-auto mb-3 md:mb-4 rounded-xl bg-gradient-to-br from-indigo-500/10 to-sky-500/10 flex items-center justify-center"><span className="text-indigo-400 text-base md:text-xl">{c.icon}</span></div>
+                <h3 className="font-[family-name:var(--font-space-grotesk)] text-[0.75rem] md:text-[0.95rem] font-bold mb-1 text-white">{c.title}</h3>
+                <p className="text-[0.7rem] md:text-sm text-indigo-400 font-medium mb-0.5">{c.issuer}</p>
+                <p className="text-[0.6rem] md:text-[0.78rem] text-gray-500">{c.date}</p>
               </a>
             ))}
           </div>
@@ -432,26 +432,26 @@ export default function PortfolioSections() {
       </section>
 
       {/* Honors & Awards */}
-      <section className="relative z-10 py-24" id="honors">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="honors">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">07</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Honors & Awards</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Honors & Awards</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 md:gap-4">
             {[
-              { icon:<Trophy className="w-5 h-5 text-rose-500" />, title:"Toppers of 4th Semester — D1 Section (SRM)", detail:"SGPA 9.7 · Jun 2026", proof:"/SEM1_Toppers.jpg" },
-              { icon:<Trophy className="w-5 h-5 text-rose-500" />, title:"Toppers of 2nd Semester — D1 Section (SRM)", detail:"SGPA 9.476 · Jun 2025", proof:"/SEM2_Toppers.jpg" },
-              { icon:<Trophy className="w-5 h-5 text-rose-500" />, title:"Toppers of 1st Semester — D1 Section (SRM)", detail:"SGPA 9.33 · Jan 2025", proof:"/SEM1_Toppers.jpg" },
-              { icon:<Award className="w-5 h-5 text-rose-500" />, title:"Proficiency in English", detail:"Delhi Public School Vadodara · 2021-22", proof:"/Proficiency_English.jpg" },
-              { icon:<Award className="w-5 h-5 text-rose-500" />, title:"Proficiency in Mathematics", detail:"Delhi Public School Vadodara · 2017-19", proof:"/Proficiency_Math_17.jpg" },
+              { icon:<Trophy className="w-4 h-4 md:w-5 md:h-5 text-rose-500" />, title:"Toppers of 4th Semester — D1 Section (SRM)", detail:"SGPA 9.7 · Jun 2026", proof:"/SEM1_Toppers.jpg" },
+              { icon:<Trophy className="w-4 h-4 md:w-5 md:h-5 text-rose-500" />, title:"Toppers of 2nd Semester — D1 Section (SRM)", detail:"SGPA 9.476 · Jun 2025", proof:"/SEM2_Toppers.jpg" },
+              { icon:<Trophy className="w-4 h-4 md:w-5 md:h-5 text-rose-500" />, title:"Toppers of 1st Semester — D1 Section (SRM)", detail:"SGPA 9.33 · Jan 2025", proof:"/SEM1_Toppers.jpg" },
+              { icon:<Award className="w-4 h-4 md:w-5 md:h-5 text-rose-500" />, title:"Proficiency in English", detail:"Delhi Public School Vadodara · 2021-22", proof:"/Proficiency_English.jpg" },
+              { icon:<Award className="w-4 h-4 md:w-5 md:h-5 text-rose-500" />, title:"Proficiency in Mathematics", detail:"Delhi Public School Vadodara · 2017-19", proof:"/Proficiency_Math_17.jpg" },
             ].map((h, i) => (
-              <div key={h.title} onClick={() => setModal({ open: true, title: h.title, type: "image", src: h.proof })} data-aos="fade-up" data-aos-delay={i * 80} className="honor-item spotlight-card glass flex items-center gap-5 rounded-[10px] py-5 px-7 hover:-translate-y-0.5 hover:shadow-card-md transition-all duration-300 reveal cursor-pointer">
-                <div className="w-[42px] h-[42px] rounded-full bg-gradient-to-br from-rose-500/10 to-purple-500/10 flex items-center justify-center flex-shrink-0"><span className="text-rose-500">{h.icon}</span></div>
+              <div key={h.title} onClick={() => setModal({ open: true, title: h.title, type: "image", src: h.proof })} data-aos="fade-up" data-aos-delay={i * 80} className="honor-item spotlight-card glass flex items-center gap-3 md:gap-5 rounded-[10px] py-4 md:py-5 px-4 md:px-7 hover:-translate-y-0.5 hover:shadow-card-md transition-all duration-300 reveal cursor-pointer">
+                <div className="w-[36px] md:w-[42px] h-[36px] md:h-[42px] rounded-full bg-gradient-to-br from-rose-500/10 to-purple-500/10 flex items-center justify-center flex-shrink-0"><span className="text-rose-500">{h.icon}</span></div>
                 <div>
-                  <h3 className="font-[family-name:var(--font-space-grotesk)] text-[0.95rem] font-semibold mb-0.5 text-white">{h.title}</h3>
-                  <p className="text-xs text-gray-500">{h.detail}</p>
+                  <h3 className="font-[family-name:var(--font-space-grotesk)] text-[0.8rem] md:text-[0.95rem] font-semibold mb-0.5 text-white">{h.title}</h3>
+                  <p className="text-[0.65rem] md:text-xs text-gray-500">{h.detail}</p>
                 </div>
               </div>
             ))}
@@ -460,26 +460,26 @@ export default function PortfolioSections() {
       </section>
 
       {/* Achievements */}
-      <section className="relative z-10 py-24" id="achievements">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="achievements">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">08</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Achievements</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Achievements</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
-              { icon:<FileText className="w-5 h-5 text-indigo-400" />, title:"Internship Completion Certificate", issuer:"Linde Engineering India Pvt. Ltd.", date:"Jun — Jul 2026", link:"/Internship_Completion_Certificate_of_Shlok_Sathwara.pdf" },
-              { icon:<Star className="w-5 h-5 text-indigo-400" />, title:"Certificate of Appreciation", issuer:"Linde Engineering India Pvt. Ltd.", date:"Jul 2026", link:"/Certification of Appreciation.pdf" },
-              { icon:<Award className="w-5 h-5 text-indigo-400" />, title:"Letter of Recommendation", issuer:"Linde Engineering India Pvt. Ltd.", date:"Jul 2026", link:"/Certification of Recommendation.pdf" },
-              { icon:<Code2 className="w-5 h-5 text-indigo-400" />, title:"HackTrax 2.0 — Certificate of Participation", issuer:"Alexa Developers SRM", date:"Hackathon", link:"/HackTrax_Certificate.pdf" },
+              { icon:<FileText className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"Internship Completion Certificate", issuer:"Linde Engineering India Pvt. Ltd.", date:"Jun — Jul 2026", link:"/Internship_Completion_Certificate_of_Shlok_Sathwara.pdf" },
+              { icon:<Star className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"Certificate of Appreciation", issuer:"Linde Engineering India Pvt. Ltd.", date:"Jul 2026", link:"/Certification of Appreciation.pdf" },
+              { icon:<Award className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"Letter of Recommendation", issuer:"Linde Engineering India Pvt. Ltd.", date:"Jul 2026", link:"/Certification of Recommendation.pdf" },
+              { icon:<Code2 className="w-4 h-4 md:w-5 md:h-5 text-indigo-400" />, title:"HackTrax 2.0 — Certificate of Participation", issuer:"Alexa Developers SRM", date:"Hackathon", link:"/HackTrax_Certificate.pdf" },
             ].map((a, i) => (
-              <a key={a.title} href={a.link} target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay={i * 80} className="achievement-card spotlight-card glass flex flex-col items-center text-center rounded-2xl p-8 text-decoration-none text-inherit hover:-translate-y-[3px] hover:shadow-card-lg hover:border-indigo-500/20 transition-all duration-300 reveal">
-                <div className="w-[56px] h-[56px] mb-4 rounded-full bg-gradient-to-br from-indigo-500/[0.12] to-purple-500/[0.12] flex items-center justify-center"><span className="text-xl">{a.icon}</span></div>
-                <h3 className="font-[family-name:var(--font-space-grotesk)] text-base font-bold mb-1 text-white">{a.title}</h3>
-                <p className="text-sm text-indigo-400 font-medium">{a.issuer}</p>
-                <p className="text-[0.78rem] text-gray-500 mt-0.5 mb-4">{a.date}</p>
-                <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.12] rounded-full text-[0.78rem] font-semibold text-indigo-400"><ExternalLink className="w-3.5 h-3.5" /> View PDF</span>
+              <a key={a.title} href={a.link} target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay={i * 80} className="achievement-card spotlight-card glass flex flex-col items-center text-center rounded-2xl p-5 md:p-8 text-decoration-none text-inherit hover:-translate-y-[3px] hover:shadow-card-lg hover:border-indigo-500/20 transition-all duration-300 reveal">
+                <div className="w-[44px] md:w-[56px] h-[44px] md:h-[56px] mb-3 md:mb-4 rounded-full bg-gradient-to-br from-indigo-500/[0.12] to-purple-500/[0.12] flex items-center justify-center"><span className="text-base md:text-xl">{a.icon}</span></div>
+                <h3 className="font-[family-name:var(--font-space-grotesk)] text-sm md:text-base font-bold mb-1 text-white">{a.title}</h3>
+                <p className="text-[0.7rem] md:text-sm text-indigo-400 font-medium">{a.issuer}</p>
+                <p className="text-[0.6rem] md:text-[0.78rem] text-gray-500 mt-0.5 mb-3 md:mb-4">{a.date}</p>
+                <span className="inline-flex items-center gap-1 px-2.5 md:px-3 py-1 md:py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.12] rounded-full text-[0.65rem] md:text-[0.78rem] font-semibold text-indigo-400"><ExternalLink className="w-3 h-3 md:w-3.5 md:h-3.5" /> View PDF</span>
               </a>
             ))}
           </div>
@@ -487,26 +487,26 @@ export default function PortfolioSections() {
       </section>
 
       {/* Testimonials */}
-      <section className="relative z-10 py-24" id="testimonials">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24" id="testimonials">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">09</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">What They Say</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">What They Say</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {[
               { text:["Shlok consistently demonstrated a strong desire to understand the purpose and business value behind the Linde Helpdesk Portal before starting development. His curiosity and eagerness to learn enabled him to quickly grasp both frontend and backend technologies and deliver high-quality solutions.","He approached challenges with a positive attitude, remained composed under pressure, and adapted quickly to changing requirements without losing momentum. His dedication, ownership, and professionalism made a positive impact on the project and the team."], name:"Miteshkumar Mehta", role:"IT Department, Linde Engineering India", initials:"MM" },
               { text:["During your six-week internship, you demonstrated a commendable level of enthusiasm, commitment, and aptitude for application development. You successfully developed a prototype application and consistently exhibited a proactive approach toward understanding user requirements.","Your willingness to listen, learn, and incorporate feedback reflected a mature and professional approach. You left a positive impression as a reliable, dedicated, and capable IT professional in the making."], name:"Mehul Vaidya", role:"Dy. Manager - Facility Management, Linde Engineering India", initials:"MV" },
             ].map((t, i) => (
-              <div key={t.name} data-aos="fade-up" data-aos-delay={i * 100} className="testimonial-card spotlight-card glass rounded-2xl p-8 hover:-translate-y-[3px] hover:shadow-card-md hover:border-indigo-500/15 transition-all duration-300 reveal">
-                <div className="mb-4"><FileText className="w-6 h-6 text-indigo-500 opacity-30" /></div>
-                {t.text.map((p,i) => <p key={i} className="text-[0.9rem] text-gray-400 leading-[1.7] mb-4 italic">{p}</p>)}
-                <div className="flex items-center gap-4 mt-6 pt-4 border-t border-white/[0.06]">
-                  <div className="w-[44px] h-[44px] rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">{t.initials}</div>
+              <div key={t.name} data-aos="fade-up" data-aos-delay={i * 100} className="testimonial-card spotlight-card glass rounded-2xl p-5 md:p-8 hover:-translate-y-[3px] hover:shadow-card-md hover:border-indigo-500/15 transition-all duration-300 reveal">
+                <div className="mb-3 md:mb-4"><FileText className="w-5 h-5 md:w-6 md:h-6 text-indigo-500 opacity-30" /></div>
+                {t.text.map((p,i) => <p key={i} className="text-[0.8rem] md:text-[0.9rem] text-gray-400 leading-[1.6] md:leading-[1.7] mb-3 md:mb-4 italic">{p}</p>)}
+                <div className="flex items-center gap-3 md:gap-4 mt-4 md:mt-6 pt-3 md:pt-4 border-t border-white/[0.06]">
+                  <div className="w-[36px] md:w-[44px] h-[36px] md:h-[44px] rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xs md:text-sm font-bold flex-shrink-0">{t.initials}</div>
                   <div>
-                    <h4 className="font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-white">{t.name}</h4>
-                    <p className="text-[0.78rem] text-gray-500">{t.role}</p>
+                    <h4 className="font-[family-name:var(--font-space-grotesk)] text-xs md:text-sm font-bold text-white">{t.name}</h4>
+                    <p className="text-[0.6rem] md:text-[0.78rem] text-gray-500">{t.role}</p>
                   </div>
                 </div>
               </div>
@@ -516,22 +516,22 @@ export default function PortfolioSections() {
       </section>
 
       {/* Contact */}
-      <section className="relative z-10 py-24 text-center" id="contact">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="flex items-center justify-center gap-5 mb-14 reveal">
+      <section className="relative z-10 py-16 md:py-24 text-center" id="contact">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="flex items-center justify-center gap-3 md:gap-5 mb-8 md:mb-14 reveal">
             <span className="section-tag font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-indigo-500">10</span>
-            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Let&apos;s Connect</h2>
+            <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Let&apos;s Connect</h2>
             <div className="hidden sm:block flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <p className="text-xl text-gray-400 max-w-[520px] mx-auto mb-10 leading-[1.8] reveal">Have a project in mind or just want to chat? I&apos;m always open to new opportunities and interesting conversations.</p>
-          <div className="flex justify-center gap-6 flex-wrap">
+          <p className="text-base md:text-xl text-gray-400 max-w-[520px] mx-auto mb-8 md:mb-10 leading-[1.6] md:leading-[1.8] reveal">Have a project in mind or just want to chat? I&apos;m always open to new opportunities and interesting conversations.</p>
+          <div className="flex justify-center gap-3 md:gap-6 flex-wrap">
             {[
-              { icon:<Mail className="w-5 h-5" />, label:"shloksathwara2@gmail.com", url:"mailto:shloksathwara2@gmail.com" },
-              { icon:<LinkedinIcon className="w-5 h-5" />, label:"LinkedIn", url:"https://www.linkedin.com/in/shlok-sathwara-4b91ab319/" },
-              { icon:<GithubIcon className="w-5 h-5" />, label:"GitHub", url:"https://github.com/ShlokSathwara2" },
-              { icon:<Code2 className="w-5 h-5" />, label:"LeetCode", url:"https://leetcode.com/u/Shlok_Sathwara/" },
+              { icon:<Mail className="w-4 h-4 md:w-5 md:h-5" />, label:"shloksathwara2@gmail.com", url:"mailto:shloksathwara2@gmail.com" },
+              { icon:<LinkedinIcon className="w-4 h-4 md:w-5 md:h-5" />, label:"LinkedIn", url:"https://www.linkedin.com/in/shlok-sathwara-4b91ab319/" },
+              { icon:<GithubIcon className="w-4 h-4 md:w-5 md:h-5" />, label:"GitHub", url:"https://github.com/ShlokSathwara2" },
+              { icon:<Code2 className="w-4 h-4 md:w-5 md:h-5" />, label:"LeetCode", url:"https://leetcode.com/u/Shlok_Sathwara/" },
             ].map((c) => (
-              <a key={c.label} href={c.url} target="_blank" rel="noopener noreferrer" className="contact-link-item flex items-center gap-3 py-4 px-7 glass rounded-[10px] text-sm font-medium text-gray-300 hover:-translate-y-[3px] hover:shadow-card-md hover:border-indigo-500 hover:text-indigo-400 transition-all duration-300">
+              <a key={c.label} href={c.url} target="_blank" rel="noopener noreferrer" className="contact-link-item flex items-center gap-2 md:gap-3 py-3 md:py-4 px-4 md:px-7 glass rounded-[10px] text-xs md:text-sm font-medium text-gray-300 hover:-translate-y-[3px] hover:shadow-card-md hover:border-indigo-500 hover:text-indigo-400 transition-all duration-300">
                 <span>{c.icon}</span> {c.label}
               </a>
             ))}

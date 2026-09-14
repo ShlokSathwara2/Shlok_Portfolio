@@ -472,3 +472,69 @@
     display: none;
   }
 }
+
+/* ── Mobile Responsive ── */
+@media (max-width: 768px) {
+  /* Navbar */
+  nav {
+    padding: 0.75rem 1rem !important;
+  }
+
+  /* Hero */
+  .hero-section {
+    flex-direction: column !important;
+    min-height: auto !important;
+    padding-bottom: 3rem;
+  }
+
+  /* About Bento Grid */
+  #about .grid {
+    grid-template-columns: 1fr !important;
+  }
+  #about .col-span-2 {
+    grid-column: span 1 !important;
+  }
+  #about .row-span-2 {
+    grid-row: span 1 !important;
+  }
+  #about .grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Section paddings */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Section headers */
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+
+  /* Glass cards */
+  .glass {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Reduce animations for performance */
+  .spotlight-card::before {
+    display: none;
+  }
+
+  /* Projects grid */
+  #projects .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Experience timeline */
+  .pl-10 {
+    padding-left: 1.5rem !important;
+  }
+
+  /* Contact form */
+  #contact .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
