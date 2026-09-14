@@ -503,22 +503,29 @@ export default function PortfolioAnimations() {
         }
         // Close mobile menu if open
         const mobileMenu = document.getElementById("mobileMenu");
-        const hamburger = document.querySelector(".hamburger") as HTMLElement;
-        if (mobileMenu) mobileMenu.classList.remove("open");
+        const hamburger = document.getElementById("hamburgerBtn");
+        if (mobileMenu) {
+          mobileMenu.style.opacity = "0";
+          mobileMenu.style.pointerEvents = "none";
+        }
         if (hamburger) hamburger.classList.remove("active");
+        document.body.style.overflow = "";
       });
     });
 
     // ══════════════════════════════════════════
     // MOBILE HAMBURGER MENU
     // ══════════════════════════════════════════
-    const hamburger = document.querySelector(".hamburger") as HTMLElement;
+    const hamburger = document.getElementById("hamburgerBtn");
     const mobileMenu = document.getElementById("mobileMenu");
 
     if (hamburger && mobileMenu) {
       hamburger.addEventListener("click", () => {
+        const isOpen = mobileMenu.style.opacity === "1";
+        mobileMenu.style.opacity = isOpen ? "0" : "1";
+        mobileMenu.style.pointerEvents = isOpen ? "none" : "all";
         hamburger.classList.toggle("active");
-        mobileMenu.classList.toggle("open");
+        document.body.style.overflow = isOpen ? "" : "hidden";
       });
     }
 

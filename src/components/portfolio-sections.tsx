@@ -97,18 +97,18 @@ export default function PortfolioSections() {
           ))}
         </div>
         <a href="#contact" className="nav-cta hidden md:inline-flex bg-white/10 text-white px-5 py-2 rounded-full text-xs font-semibold tracking-wide hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06]">Let&apos;s Talk</a>
-        <button className="hamburger md:hidden flex flex-col justify-center gap-[5px] w-[30px] h-[30px] bg-transparent border-none cursor-pointer z-[200] p-0" aria-label="Toggle menu">
-          <span className="hamburger-span block w-full h-[2px] bg-white rounded-[2px] transition-all duration-300 origin-center"></span>
-          <span className="hamburger-span block w-full h-[2px] bg-white rounded-[2px] transition-all duration-300 origin-center"></span>
-          <span className="hamburger-span block w-full h-[2px] bg-white rounded-[2px] transition-all duration-300 origin-center"></span>
+        <button id="hamburgerBtn" className="md:hidden flex flex-col justify-center gap-[5px] w-[30px] h-[30px] bg-transparent border-none cursor-pointer z-[200] p-0 relative" aria-label="Toggle menu">
+          <span className="hamburger-line block w-full h-[2px] bg-white rounded-[2px] transition-all duration-300 origin-center"></span>
+          <span className="hamburger-line block w-full h-[2px] bg-white rounded-[2px] transition-all duration-300 origin-center"></span>
+          <span className="hamburger-line block w-full h-[2px] bg-white rounded-[2px] transition-all duration-300 origin-center"></span>
         </button>
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <div className="mobile-menu" id="mobileMenu">
-        <div className="mobile-menu-links">
+      <div id="mobileMenu" className="fixed inset-0 z-[150] bg-[rgba(10,10,15,0.97)] backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+        <div className="flex flex-col items-center justify-center h-full gap-8">
           {[{l:"Home",h:"#hero"},{l:"About",h:"#about"},{l:"Experience",h:"#experience"},{l:"Projects",h:"#projects"},{l:"Research",h:"#publication"},{l:"Education",h:"#education"},{l:"Skills",h:"#skills"},{l:"Certs",h:"#certifications"},{l:"Achievements",h:"#achievements"},{l:"Contact",h:"#contact"}].map((link) => (
-            <a key={link.h} href={link.h} className="mobile-link">{link.l}</a>
+            <a key={link.h} href={link.h} className="font-[family-name:var(--font-space-grotesk)] text-[1.6rem] font-bold text-white no-underline hover:text-indigo-400 transition-colors">{link.l}</a>
           ))}
         </div>
       </div>

@@ -30,7 +30,10 @@ export default function ParticleNetwork({ scrollY = 0 }: { scrollY?: number }) {
     canvas.height = window.innerHeight * dpr;
     ctx.scale(dpr, dpr);
 
-    const count = Math.min(Math.floor((window.innerWidth * window.innerHeight) / 18000), 80);
+    const isMobile = window.innerWidth < 768;
+    const count = isMobile
+      ? Math.min(Math.floor((window.innerWidth * window.innerHeight) / 40000), 25)
+      : Math.min(Math.floor((window.innerWidth * window.innerHeight) / 18000), 80);
     particlesRef.current = Array.from({ length: count }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
