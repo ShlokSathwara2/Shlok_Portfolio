@@ -276,20 +276,40 @@ export default function PortfolioSections() {
             <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Currently Building</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="relative glass spotlight-card rounded-2xl p-5 md:p-10 overflow-hidden reveal" data-aos="fade-up">
-            <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.04)_0%,transparent_50%)] pointer-events-none"></div>
-            <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 bg-rose-500/[0.08] border border-rose-500/[0.15] rounded-full text-[0.65rem] md:text-xs font-semibold text-rose-400 uppercase tracking-[0.05em] mb-3 md:mb-4">In Progress</div>
-            <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-2xl font-extrabold mb-2 md:mb-3 text-white">FRIDAY — AI Voice Assistant</h3>
-            <p className="text-[0.8rem] md:text-[0.95rem] text-gray-400 leading-relaxed mb-4 md:mb-6 max-w-[700px]">A full-featured personal AI assistant with voice biometric authentication, emotion detection, multi-model intelligence (Gemini + Ollama), RAG pipeline, screen OCR, smart home control, encrypted vault, and proactive scheduling. Built with Python, featuring a plugin architecture and event-driven module communication.</p>
-            <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
-              {["Voice & Wake Word","Gemini + Ollama AI","Screen OCR & Vision","Face Auth & Vault","Smart Home Control","Smart Scheduling"].map((f) => (
-                <span key={f} className="inline-flex items-center gap-1 md:gap-1.5 px-2.5 md:px-3.5 py-1 md:py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.1] rounded-full text-[0.6rem] md:text-xs font-medium text-indigo-400">{f}</span>
-              ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {/* FRIDAY */}
+            <div className="relative glass spotlight-card rounded-2xl p-5 md:p-8 overflow-hidden reveal" data-aos="fade-up">
+              <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.04)_0%,transparent_50%)] pointer-events-none"></div>
+              <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 bg-rose-500/[0.08] border border-rose-500/[0.15] rounded-full text-[0.65rem] md:text-xs font-semibold text-rose-400 uppercase tracking-[0.05em] mb-3 md:mb-4">In Progress</div>
+              <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-xl font-extrabold mb-2 md:mb-3 text-white">FRIDAY — AI Voice Assistant</h3>
+              <p className="text-[0.75rem] md:text-[0.88rem] text-gray-400 leading-[1.6] md:leading-[1.7] mb-4 md:mb-5">A full-featured personal AI assistant with voice biometric authentication, emotion detection, multi-model intelligence (Gemini + Ollama), RAG pipeline, screen OCR, smart home control, encrypted vault, and proactive scheduling.</p>
+              <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-5">
+                {["Voice & Wake Word","Gemini + Ollama AI","Screen OCR & Vision","Face Auth & Vault","Smart Home Control","Smart Scheduling"].map((f) => (
+                  <span key={f} className="inline-flex items-center gap-1 md:gap-1.5 px-2.5 md:px-3.5 py-1 md:py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.1] rounded-full text-[0.6rem] md:text-xs font-medium text-indigo-400">{f}</span>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-1 md:gap-1.5">
+                {["Python","Gemini","Ollama","Whisper","OpenCV","Tesseract","SQLite","FastAPI"].map((t) => (
+                  <span key={t} className="px-2 md:px-2.5 py-0.5 md:py-1 bg-sky-500/[0.06] border border-sky-500/[0.1] rounded-full text-[0.6rem] md:text-[0.7rem] font-medium text-sky-400">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-wrap gap-1 md:gap-1.5">
-              {["Python","Gemini","Ollama","Whisper","OpenCV","Tesseract","SQLite","FastAPI"].map((t) => (
-                <span key={t} className="px-2 md:px-2.5 py-0.5 md:py-1 bg-sky-500/[0.06] border border-sky-500/[0.1] rounded-full text-[0.6rem] md:text-[0.7rem] font-medium text-sky-400">{t}</span>
-              ))}
+            {/* ATS Resume Analyzer + Tailor */}
+            <div className="relative glass spotlight-card rounded-2xl p-5 md:p-8 overflow-hidden reveal" data-aos="fade-up" data-aos-delay="100">
+              <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.04)_0%,transparent_50%)] pointer-events-none"></div>
+              <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 bg-amber-500/[0.08] border border-amber-500/[0.15] rounded-full text-[0.65rem] md:text-xs font-semibold text-amber-400 uppercase tracking-[0.05em] mb-3 md:mb-4">In Progress</div>
+              <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-xl font-extrabold mb-2 md:mb-3 text-white">ATS Resume Analyzer &amp; Tailor</h3>
+              <p className="text-[0.75rem] md:text-[0.88rem] text-gray-400 leading-[1.6] md:leading-[1.7] mb-4 md:mb-5">Hybrid engine combining deterministic rule-based ATS parsing analysis with LLM-powered semantic matching. Detects layout/format issues thatATS parsers choke on, scores resume–JD fit, flags overqualification risk, and rewrites bullets to mirror the target job&apos;s language. Tracks score history across versions.</p>
+              <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-5">
+                {["Layout Rule Engine","Semantic JD Match","Bullet Rewrite AI","Overqualification Flags","Score History","ATS Parseability Check"].map((f) => (
+                  <span key={f} className="inline-flex items-center gap-1 md:gap-1.5 px-2.5 md:px-3.5 py-1 md:py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.1] rounded-full text-[0.6rem] md:text-xs font-medium text-indigo-400">{f}</span>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-1 md:gap-1.5">
+                {["Next.js","FastAPI","Supabase","pgvector","Gemini 2.5 Flash","Groq","pdfplumber","python-docx"].map((t) => (
+                  <span key={t} className="px-2 md:px-2.5 py-0.5 md:py-1 bg-sky-500/[0.06] border border-sky-500/[0.1] rounded-full text-[0.6rem] md:text-[0.7rem] font-medium text-sky-400">{t}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

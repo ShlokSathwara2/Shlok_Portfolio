@@ -462,6 +462,11 @@
     grid-template-columns: 1fr !important;
   }
 
+  /* Currently Building grid */
+  #building .grid {
+    grid-template-columns: 1fr !important;
+  }
+
   /* Experience timeline */
   .pl-10 {
     padding-left: 1.5rem !important;
