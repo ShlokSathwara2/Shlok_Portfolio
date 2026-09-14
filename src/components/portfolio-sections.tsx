@@ -276,7 +276,7 @@ export default function PortfolioSections() {
             <h2 className="section-title font-[family-name:var(--font-space-grotesk)] text-xl md:text-[2.2rem] font-extrabold tracking-[-0.02em] text-white">Currently Building</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-white/[0.06] to-transparent"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {/* FRIDAY */}
             <div className="relative glass spotlight-card rounded-2xl p-5 md:p-8 overflow-hidden reveal" data-aos="fade-up">
               <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.04)_0%,transparent_50%)] pointer-events-none"></div>
@@ -294,19 +294,36 @@ export default function PortfolioSections() {
                 ))}
               </div>
             </div>
-            {/* ATS Resume Analyzer + Tailor */}
+            {/* ATS Resume Analyzer */}
             <div className="relative glass spotlight-card rounded-2xl p-5 md:p-8 overflow-hidden reveal" data-aos="fade-up" data-aos-delay="100">
               <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.04)_0%,transparent_50%)] pointer-events-none"></div>
               <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 bg-amber-500/[0.08] border border-amber-500/[0.15] rounded-full text-[0.65rem] md:text-xs font-semibold text-amber-400 uppercase tracking-[0.05em] mb-3 md:mb-4">In Progress</div>
-              <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-xl font-extrabold mb-2 md:mb-3 text-white">ATS Resume Analyzer &amp; Tailor</h3>
-              <p className="text-[0.75rem] md:text-[0.88rem] text-gray-400 leading-[1.6] md:leading-[1.7] mb-4 md:mb-5">Hybrid engine combining deterministic rule-based ATS parsing analysis with LLM-powered semantic matching. Detects layout/format issues thatATS parsers choke on, scores resume–JD fit, flags overqualification risk, and rewrites bullets to mirror the target job&apos;s language. Tracks score history across versions.</p>
+              <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-xl font-extrabold mb-2 md:mb-3 text-white">ATS Resume Analyzer</h3>
+              <p className="text-[0.75rem] md:text-[0.88rem] text-gray-400 leading-[1.6] md:leading-[1.7] mb-4 md:mb-5">Hybrid rule-engine + LLM system that detects layout/format issues ATS parsers choke on — multi-column layouts, tables, text boxes, non-standard fonts, missing selectable text. Scores parseability, structure, and content strength with a weighted model. Tracks score history across resume versions.</p>
               <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-5">
-                {["Layout Rule Engine","Semantic JD Match","Bullet Rewrite AI","Overqualification Flags","Score History","ATS Parseability Check"].map((f) => (
+                {["Layout Rule Engine","Parseability Scoring","Section Detection","Content Quality Checks","Score History","Version Diffing"].map((f) => (
                   <span key={f} className="inline-flex items-center gap-1 md:gap-1.5 px-2.5 md:px-3.5 py-1 md:py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.1] rounded-full text-[0.6rem] md:text-xs font-medium text-indigo-400">{f}</span>
                 ))}
               </div>
               <div className="flex flex-wrap gap-1 md:gap-1.5">
-                {["Next.js","FastAPI","Supabase","pgvector","Gemini 2.5 Flash","Groq","pdfplumber","python-docx"].map((t) => (
+                {["Next.js","FastAPI","Supabase","Gemini 2.5 Flash","pdfplumber","python-docx","SpaCy","Framer Motion"].map((t) => (
+                  <span key={t} className="px-2 md:px-2.5 py-0.5 md:py-1 bg-sky-500/[0.06] border border-sky-500/[0.1] rounded-full text-[0.6rem] md:text-[0.7rem] font-medium text-sky-400">{t}</span>
+                ))}
+              </div>
+            </div>
+            {/* Resume Tailor */}
+            <div className="relative glass spotlight-card rounded-2xl p-5 md:p-8 overflow-hidden reveal" data-aos="fade-up" data-aos-delay="200">
+              <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.04)_0%,transparent_50%)] pointer-events-none"></div>
+              <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 bg-amber-500/[0.08] border border-amber-500/[0.15] rounded-full text-[0.65rem] md:text-xs font-semibold text-amber-400 uppercase tracking-[0.05em] mb-3 md:mb-4">In Progress</div>
+              <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-xl font-extrabold mb-2 md:mb-3 text-white">Resume Tailor</h3>
+              <p className="text-[0.75rem] md:text-[0.88rem] text-gray-400 leading-[1.6] md:leading-[1.7] mb-4 md:mb-5">Per-application resume tailoring engine. Parses JDs to extract required skills and seniority signals, matches your master resume items via keyword + semantic scoring (pgvector), flags overqualification risk, and rewrites bullets to mirror the target role&apos;s language. Outputs ATS-friendly docx/PDF.</p>
+              <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-5">
+                {["JD Skill Extraction","Semantic Matching","Overqualification Flags","Bullet Rewrite AI","ATS Template Output","Master Resume DB"].map((f) => (
+                  <span key={f} className="inline-flex items-center gap-1 md:gap-1.5 px-2.5 md:px-3.5 py-1 md:py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.1] rounded-full text-[0.6rem] md:text-xs font-medium text-indigo-400">{f}</span>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-1 md:gap-1.5">
+                {["Next.js","FastAPI","Supabase","pgvector","Gemini","Groq","python-docx","Framer Motion"].map((t) => (
                   <span key={t} className="px-2 md:px-2.5 py-0.5 md:py-1 bg-sky-500/[0.06] border border-sky-500/[0.1] rounded-full text-[0.6rem] md:text-[0.7rem] font-medium text-sky-400">{t}</span>
                 ))}
               </div>
