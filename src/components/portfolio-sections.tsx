@@ -252,17 +252,18 @@ export default function PortfolioSections() {
           <div className="relative glass spotlight-card rounded-2xl p-5 md:p-10 overflow-hidden reveal" data-aos="fade-up">
             <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.04)_0%,transparent_50%)] pointer-events-none"></div>
             <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 bg-sky-500/[0.08] border border-sky-500/[0.15] rounded-full text-[0.65rem] md:text-xs font-semibold text-sky-400 uppercase tracking-[0.05em] mb-3 md:mb-4">Peer-Reviewed Paper</div>
-            <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-2xl font-extrabold mb-2 leading-snug text-white">AI-Based Cloud Intrusion Detection System Using Machine Learning</h3>
+            <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-2xl font-extrabold mb-2 leading-snug text-white">AI-Based Intelligent Intrusion Detection System for Cloud</h3>
             <p className="text-[0.7rem] md:text-sm text-indigo-400 font-medium mb-3 md:mb-4">ICICCS 2026 — International Conference on Intelligent Computing and Communication Systems</p>
-            <p className="text-[0.8rem] md:text-[0.95rem] text-gray-400 leading-relaxed mb-4 md:mb-6 max-w-[750px]">Proposed an ML-based intrusion detection system for cloud environments achieving <strong className="text-white">98.2% accuracy</strong>. Evaluated multiple classifiers (Random Forest, XGBoost, SVM) on the NSL-KDD dataset with feature engineering, cross-validation, and hyperparameter tuning. Addressed class imbalance via SMOTE and compared ensemble strategies for real-time cloud threat detection.</p>
+            <p className="text-[0.8rem] md:text-[0.95rem] text-gray-400 leading-relaxed mb-4 md:mb-6 max-w-[750px]">Built an AI-driven intrusion detection framework for cloud environments achieving <strong className="text-white">98%+ accuracy</strong> with a <strong className="text-white">1.8% false positive rate</strong>. Evaluated Random Forest against SVM and Decision Tree classifiers on the CICIDS2017 dataset. The system learns behavioral signatures instead of static byte patterns, enabling detection of novel zero-day attacks.</p>
             <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
-              {["98.2% Accuracy","NSL-KDD Dataset","RF, XGBoost, SVM","Accepted 2026"].map((m) => (
+              {["98%+ Accuracy","CICIDS2017 Dataset","RF, SVM, Decision Tree","1.8% FPR","Accepted 2026"].map((m) => (
                 <span key={m} className="inline-flex items-center gap-1 md:gap-1.5 px-2.5 md:px-3.5 py-1 md:py-1.5 bg-indigo-500/[0.06] border border-indigo-500/[0.1] rounded-full text-[0.6rem] md:text-xs font-medium text-indigo-400">{m}</span>
               ))}
             </div>
             <div className="flex gap-3 md:gap-4 flex-wrap">
               <a href="/ICICCS-2026_Paper_Accepted.pdf" target="_blank" className="pub-link inline-flex items-center gap-1.5 px-4 md:px-5 py-2 md:py-2.5 bg-white/10 text-white rounded-full text-[0.65rem] md:text-xs font-semibold hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06]">View Acceptance Letter</a>
               <a href="/ICICCS_Paper.docx" download className="pub-link inline-flex items-center gap-1.5 px-4 md:px-5 py-2 md:py-2.5 bg-white/10 text-white rounded-full text-[0.65rem] md:text-xs font-semibold hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06]">Download Paper</a>
+              <button onClick={() => setModal({ open: true, title: "Paper Acceptance Proof", type: "image", src: "/paper-acceptance.jpg" })} className="pub-link inline-flex items-center gap-1.5 px-4 md:px-5 py-2 md:py-2.5 bg-white/10 text-white rounded-full text-[0.65rem] md:text-xs font-semibold hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06] cursor-pointer">View Acceptance</button>
             </div>
           </div>
         </div>
