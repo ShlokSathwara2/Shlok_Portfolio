@@ -262,7 +262,6 @@ export default function PortfolioSections() {
             </div>
             <div className="flex gap-3 md:gap-4 flex-wrap">
               <a href="/ICICCS-2026_Paper_Accepted.pdf" target="_blank" className="pub-link inline-flex items-center gap-1.5 px-4 md:px-5 py-2 md:py-2.5 bg-white/10 text-white rounded-full text-[0.65rem] md:text-xs font-semibold hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06]">View Acceptance Letter</a>
-              <a href="/ICICCS_Paper.docx" download className="pub-link inline-flex items-center gap-1.5 px-4 md:px-5 py-2 md:py-2.5 bg-white/10 text-white rounded-full text-[0.65rem] md:text-xs font-semibold hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06]">Download Paper</a>
               <button onClick={() => setModal({ open: true, title: "Paper Acceptance Proof", type: "image", src: "/paper-acceptance.jpg" })} className="pub-link inline-flex items-center gap-1.5 px-4 md:px-5 py-2 md:py-2.5 bg-white/10 text-white rounded-full text-[0.65rem] md:text-xs font-semibold hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300 border border-white/[0.06] cursor-pointer">View Acceptance</button>
             </div>
           </div>
