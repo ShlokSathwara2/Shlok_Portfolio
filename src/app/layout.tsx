@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import "./editorial.css";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -15,9 +16,10 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shlokportfolio-silk.vercel.app"),
   title: "Shlok Sathwara | Software Engineer & AI Developer",
   description:
-    "Portfolio of Shlok Sathwara — CS student at SRMIST, Software Engineer specializing in AI-powered full-stack applications, DSA, and cloud platforms.",
+    "Portfolio of Shlok Sathwara — CS student at SRMIST, Software Engineer specializing in AI-powered full-stack applications, DSA, and cloud platforms. 14+ projects, Linde intern, Oracle APEX certified.",
   keywords: [
     "Shlok Sathwara",
     "software engineer",
@@ -31,20 +33,29 @@ export const metadata: Metadata = {
     "portfolio",
   ],
   authors: [{ name: "Shlok Sathwara" }],
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Shlok Sathwara | Software Engineer & AI Developer",
     description:
-      "CS student at SRMIST building AI-powered apps. 10+ projects, Linde intern, Oracle APEX certified.",
+      "CS student at SRMIST building AI-powered apps. 14+ projects, Linde intern, Oracle APEX certified.",
     type: "website",
-    url: "https://shlokportfolio.vercel.app",
-    images: ["/profile.jpg"],
+    url: "https://shlokportfolio-silk.vercel.app",
+    siteName: "Shlok Sathwara",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Shlok Sathwara — Software Engineer & AI Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Shlok Sathwara | Software Engineer & AI Developer",
     description:
-      "CS student at SRMIST building AI-powered apps. 10+ projects, Linde intern, Oracle APEX certified.",
-    images: ["/profile.jpg"],
+      "CS student at SRMIST building AI-powered apps. 14+ projects, Linde intern, Oracle APEX certified.",
+    images: ["/og-image.jpg"],
   },
 };
 

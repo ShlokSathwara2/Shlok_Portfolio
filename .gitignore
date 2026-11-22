@@ -1,4 +1,42 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
 __pycache__/
-node_modules/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
 .env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# temporary / user reference media in root
+/*.jpg
+/*.mp4
+/*.html
+/hero-cinematic/
+/applications/
 ICICCS_Paper.docx

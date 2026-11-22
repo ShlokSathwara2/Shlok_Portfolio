@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import ScrollExpandMedia from "@/components/ui/scroll-expansion-hero";
 
 interface MediaAbout {
@@ -77,12 +78,12 @@ export default function ScrollDemoPage() {
   return (
     <div className="min-h-screen">
       {/* Back to portfolio link */}
-      <a
+      <Link
         href="/"
         className="fixed top-4 left-4 z-50 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-lg text-sm font-medium text-gray-700 hover:bg-white transition-colors border border-gray-200"
       >
         ← Back to Portfolio
-      </a>
+      </Link>
 
       {/* Media type toggle */}
       <div className="fixed top-4 right-4 z-50 flex gap-2">

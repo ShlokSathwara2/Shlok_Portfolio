@@ -43,8 +43,12 @@ const ScrollExpandMedia = ({
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    // Reset the expansion state when the media type changes.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setScrollProgress(0);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShowContent(false);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMediaFullyExpanded(false);
   }, [mediaType]);
 

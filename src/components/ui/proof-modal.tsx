@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { X } from "lucide-react";
 
 interface ProofModalProps {
   open: boolean;
@@ -10,17 +11,30 @@ interface ProofModalProps {
   src: string;
 }
 
-export default function ProofModal({ open, onClose, title, type, src }: ProofModalProps) {
+export default function ProofModal({
+  open,
+  onClose,
+  title,
+  type,
+  src,
+}: ProofModalProps) {
+  const closeRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+    const previous = document.activeElement as HTMLElement | null;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
     };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
+    const focusTimer = window.setTimeout(() => closeRef.current?.focus(), 30);
+
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
+      window.clearTimeout(focusTimer);
+      previous?.focus?.();
     };
   }, [open, onClose]);
 
@@ -28,44 +42,42 @@ export default function ProofModal({ open, onClose, title, type, src }: ProofMod
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-8"
+      className="proof-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label={title || "Proof"}
       onClick={onClose}
     >
-      {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
-
-      {/* Modal */}
+      <div className="proof-modal-backdrop" aria-hidden />
       <div
-        className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col animate-[modalIn_0.25s_ease]"
-        onClick={(e) => e.stopPropagation()}
+        className="proof-modal-card"
+        data-lenis-prevent
+        onClick={(event) => event.stopPropagation()}
       >
-        {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-black/[0.06]">
-          <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg font-bold truncate pr-4">
-            {title || "Proof"}
-          </h3>
+        <header className="proof-modal-head">
+          <div>
+            <span className="section-kicker">
+              <span className="section-index">PROOF</span>
+              DOCUMENT
+            </span>
+            <h3>{title || "Proof"}</h3>
+          </div>
           <button
+            ref={closeRef}
+            type="button"
+            className="proof-modal-close"
             onClick={onClose}
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-900 transition-colors text-lg font-bold flex-shrink-0"
+            aria-label="Close proof"
           >
-            &times;
+            <X aria-hidden />
           </button>
-        </div>
+        </header>
 
-        {/* Content */}
-        <div className="flex-1 overflow-auto p-4">
+        <div className="proof-modal-content">
           {type === "image" ? (
-            <img
-              src={src}
-              alt={title || "Proof"}
-              className="w-full h-auto rounded-lg object-contain max-h-[75vh]"
-            />
+            <img src={src} alt={title || "Proof"} loading="lazy" />
           ) : (
-            <iframe
-              src={src}
-              className="w-full h-[75vh] rounded-lg border-0"
-              title={title || "Proof"}
-            />
+            <iframe src={src} title={title || "Proof"} loading="lazy" />
           )}
         </div>
       </div>
