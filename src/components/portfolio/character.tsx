@@ -789,96 +789,99 @@ export function Character({
         </mesh>
       ))}
 
-      {/* Laptop: correctly oriented on desk between Shlok and viewer */}
+      {/* Laptop: Photorealistic CNC anodized Space Gray developer workstation */}
       <group position={[0, 0.665, 0.35]}>
-        {/* Laptop base */}
-        <mesh position={[0, 0.015, 0]}>
-          <boxGeometry args={[0.64, 0.026, 0.40]} />
-          <meshStandardMaterial color="#c9ced6" metalness={0.4} roughness={0.35} />
+        {/* Laptop chassis base (anodized space-gray aluminum with slim profile) */}
+        <mesh position={[0, 0.012, 0]}>
+          <boxGeometry args={[0.66, 0.02, 0.42]} />
+          <meshStandardMaterial color="#1c212b" metalness={0.82} roughness={0.26} />
         </mesh>
-        {/* Trackpad (nearest to Shlok, at -z) */}
-        <mesh position={[0, 0.03, -0.11]}>
-          <boxGeometry args={[0.20, 0.002, 0.12]} />
-          <meshStandardMaterial color="#b4bac4" roughness={0.45} metalness={0.3} />
+
+        {/* Front thumb notch groove */}
+        <mesh position={[0, 0.019, -0.208]}>
+          <boxGeometry args={[0.11, 0.005, 0.006]} />
+          <meshStandardMaterial color="#0f131a" roughness={0.7} />
         </mesh>
-        {/* Keyboard recess (in the middle) */}
-        <mesh position={[0, 0.03, 0.04]}>
-          <boxGeometry args={[0.55, 0.002, 0.22]} />
-          <meshStandardMaterial color="#141822" roughness={0.7} />
+
+        {/* Large glass precision trackpad */}
+        <mesh position={[0, 0.023, -0.115]}>
+          <boxGeometry args={[0.22, 0.002, 0.135]} />
+          <meshStandardMaterial color="#232936" roughness={0.32} metalness={0.4} />
         </mesh>
-        {/* Keyboard key rows */}
-        {[-0.04, 0.00, 0.04, 0.08, 0.12].map((z, rowIdx) => (
-          <mesh key={rowIdx} position={[0, 0.033, z]}>
-            <boxGeometry args={[0.52, 0.004, 0.028]} />
+        {/* Trackpad subtle border rim */}
+        <mesh position={[0, 0.0225, -0.115]}>
+          <boxGeometry args={[0.224, 0.001, 0.139]} />
+          <meshStandardMaterial color="#384355" roughness={0.5} />
+        </mesh>
+
+        {/* Recessed keyboard deck */}
+        <mesh position={[0, 0.0225, 0.055]}>
+          <boxGeometry args={[0.56, 0.002, 0.22]} />
+          <meshStandardMaterial color="#0c0f16" roughness={0.8} />
+        </mesh>
+
+        {/* Left speaker grille strip */}
+        <mesh position={[-0.30, 0.023, 0.055]}>
+          <boxGeometry args={[0.025, 0.002, 0.20]} />
+          <meshStandardMaterial color="#141822" roughness={0.85} />
+        </mesh>
+        {/* Right speaker grille strip */}
+        <mesh position={[0.30, 0.023, 0.055]}>
+          <boxGeometry args={[0.025, 0.002, 0.20]} />
+          <meshStandardMaterial color="#141822" roughness={0.85} />
+        </mesh>
+
+        {/* Individual chiclet keyboard key rows with cyber backlighting */}
+        {[-0.035, 0.008, 0.052, 0.095, 0.138].map((z, rowIdx) => (
+          <mesh key={rowIdx} position={[0, 0.026, z]}>
+            <boxGeometry args={[0.53, 0.004, 0.032]} />
             <meshStandardMaterial
-              color="#1e2432"
-              roughness={0.65}
-              emissive="#0e2338"
-              emissiveIntensity={0.35}
+              color="#171d28"
+              roughness={0.45}
+              metalness={0.2}
+              emissive="#38bdf8"
+              emissiveIntensity={0.22}
             />
           </mesh>
         ))}
 
-        {/* Laptop hinge (at far edge away from Shlok, +z) */}
-        <mesh position={[0, 0.028, 0.18]} rotation={[0, 0, Math.PI / 2]}>
-          <cylinderGeometry args={[0.012, 0.012, 0.58, 16]} />
-          <meshStandardMaterial color="#8e95a2" metalness={0.6} roughness={0.3} />
+        {/* Titanium magnetic hinge cylinder at back edge (+z) */}
+        <mesh position={[0, 0.026, 0.198]} rotation={[0, 0, Math.PI / 2]}>
+          <cylinderGeometry args={[0.010, 0.010, 0.60, 24]} />
+          <meshStandardMaterial color="#2d3340" metalness={0.88} roughness={0.2} />
         </mesh>
 
-        {/* Laptop screen lid (tilted slightly back away from Shlok, towards +z) */}
-        <group position={[0, 0.03, 0.18]} rotation={[0.22, 0, 0]}>
-          {/* Outer aluminum lid */}
-          <mesh position={[0, 0.19, 0]}>
-            <boxGeometry args={[0.64, 0.38, 0.018]} />
-            <meshStandardMaterial color="#c9ced6" metalness={0.45} roughness={0.35} />
+        {/* Laptop screen lid (ergonomic ~105° open angle, tilted back towards +z) */}
+        <group position={[0, 0.028, 0.198]} rotation={[0.22, 0, 0]}>
+          {/* Outer aluminum display shell */}
+          <mesh position={[0, 0.20, 0]}>
+            <boxGeometry args={[0.66, 0.40, 0.012]} />
+            <meshStandardMaterial color="#1c212b" metalness={0.82} roughness={0.26} />
           </mesh>
 
-          {/* Glowing logo on the back of the lid (facing +z towards viewer in front of desk) */}
-          <mesh position={[0, 0.19, 0.01]}>
-            <circleGeometry args={[0.045, 20]} />
-            <meshStandardMaterial
-              color="#7dd3fc"
-              emissive="#38bdf8"
-              emissiveIntensity={2.0}
-              toneMapped={false}
-            />
-          </mesh>
-
-          {/* Inner screen display (facing -z towards Shlok and keyboard) */}
-          <group position={[0, 0.19, -0.01]}>
-            {/* Dark display bezel */}
-            <mesh rotation={[0, Math.PI, 0]}>
-              <planeGeometry args={[0.60, 0.35]} />
-              <meshStandardMaterial color="#080c16" roughness={0.5} />
+          {/* Iconic HP Premium 4-Slash Minimalist Chrome Logo on lid exterior */}
+          <group position={[0, 0.20, 0.007]} rotation={[0, 0, -0.44]}>
+            {/* 4 Angled Chrome Slits of the iconic HP Spectre logo */}
+            <mesh position={[-0.021, -0.010, 0]}>
+              <planeGeometry args={[0.005, 0.044]} />
+              <meshStandardMaterial color="#e2e8f0" metalness={0.96} roughness={0.08} />
             </mesh>
-
-            {/* Glowing active code lines in IDE */}
-            <group rotation={[0, Math.PI, 0]}>
-              {[
-                { y: 0.12, w: 0.28, color: "#38bdf8" },
-                { y: 0.08, w: 0.44, color: "#4ade80" },
-                { y: 0.04, w: 0.36, color: "#f43f5e" },
-                { y: 0.00, w: 0.50, color: "#38bdf8" },
-                { y: -0.04, w: 0.34, color: "#fbbf24" },
-                { y: -0.08, w: 0.42, color: "#c084fc" },
-                { y: -0.12, w: 0.26, color: "#4ade80" },
-              ].map((line, idx) => (
-                <mesh key={idx} position={[-0.24 + line.w / 2, line.y, 0.001]}>
-                  <planeGeometry args={[line.w, 0.014]} />
-                  <meshBasicMaterial color={line.color} />
-                </mesh>
-              ))}
-
-              {/* Active blinking cursor */}
-              <mesh position={[-0.24 + 0.28, -0.12, 0.002]}>
-                <planeGeometry args={[0.008, 0.018]} />
-                <meshBasicMaterial color="#38bdf8" />
-              </mesh>
-            </group>
-
-            {/* Cyan display glow illuminating Shlok and hands */}
-            <pointLight position={[0, 0, -0.15]} color="#38bdf8" intensity={1.8} distance={1.8} />
+            <mesh position={[-0.007, 0.008, 0]}>
+              <planeGeometry args={[0.005, 0.070]} />
+              <meshStandardMaterial color="#e2e8f0" metalness={0.96} roughness={0.08} />
+            </mesh>
+            <mesh position={[0.007, -0.008, 0]}>
+              <planeGeometry args={[0.005, 0.070]} />
+              <meshStandardMaterial color="#e2e8f0" metalness={0.96} roughness={0.08} />
+            </mesh>
+            <mesh position={[0.021, 0.010, 0]}>
+              <planeGeometry args={[0.005, 0.044]} />
+              <meshStandardMaterial color="#e2e8f0" metalness={0.96} roughness={0.08} />
+            </mesh>
           </group>
+
+          {/* Interactive Retina IDE Screen */}
+          <InteractiveIdeScreen />
         </group>
       </group>
 
@@ -909,6 +912,529 @@ export function Character({
         <sphereGeometry args={[0.12, 12, 10]} />
         <meshStandardMaterial color="#4f8a5c" roughness={0.8} />
       </mesh>
+    </group>
+  );
+}
+
+function InteractiveIdeScreen() {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const textureRef = useRef<THREE.CanvasTexture | null>(null);
+  const tabRef = useRef<0 | 1>(0);
+  const charIndexRef = useRef(0);
+  const lastUpdateRef = useRef(0);
+  const flashRef = useRef(0);
+
+  const snippets = useMemo(
+    () => [
+      {
+        filename: "SurplusShareController.java",
+        lang: "Java 21",
+        path: "surplusshare  >  src  >  main  >  java  >  SurplusShareController.java",
+        tree: [
+          { name: "SURPLUSSHARE", indent: 0, folder: true, open: true },
+          { name: "src/main/java", indent: 1, folder: true, open: true },
+          { name: "SurplusShareController.java", indent: 2, active: true },
+          { name: "DispatchService.java", indent: 2 },
+          { name: "JwtAuthFilter.java", indent: 2 },
+          { name: "pom.xml", indent: 1 },
+          { name: "SHOPWISE-ML", indent: 0, folder: true, open: true },
+          { name: "hybrid_pipeline.py", indent: 1 },
+          { name: "main.py", indent: 1 },
+        ],
+        lines: [
+          "package com.shlok.surplusshare.controller;",
+          "",
+          "@RestController",
+          "@RequestMapping(\"/api/v1/dispatch\")",
+          "public class SurplusShareController {",
+          "  private final DispatchService dispatchService;",
+          "",
+          "  @PostMapping(\"/claim/{id}\")",
+          "  public ResponseEntity<ClaimResult> claimFood(",
+          "      @AuthenticationPrincipal User receiver,",
+          "      @PathVariable Long id) {",
+          "    var claim = dispatchService.lockAndAssign(id, receiver);",
+          "    notificationService.broadcast(claim.getDonor());",
+          "    return ResponseEntity.ok(new ClaimResult(claim));",
+          "  }",
+          "}",
+        ],
+        terminalCmd: "shlok@macbook:~/SurplusShare (main) $ ./mvnw test -Dtest=SmokeTest",
+        terminalOut: [
+          "[INFO] Running com.shlok.surplusshare.SmokeTest",
+          "[INFO] Tests run: 36, Failures: 0, Errors: 0, Time: 0.88 s",
+          "[INFO] BUILD SUCCESS — JWT & Auto-Reject workflow verified",
+        ],
+      },
+      {
+        filename: "hybrid_pipeline.py",
+        lang: "Python 3.11",
+        path: "shopwise-ml  >  recommender  >  hybrid_pipeline.py",
+        tree: [
+          { name: "SURPLUSSHARE", indent: 0, folder: true, open: false },
+          { name: "SHOPWISE-ML", indent: 0, folder: true, open: true },
+          { name: "recommender", indent: 1, folder: true, open: true },
+          { name: "hybrid_pipeline.py", indent: 2, active: true },
+          { name: "svd_model.py", indent: 2 },
+          { name: "tfidf_encoder.py", indent: 2 },
+          { name: "main.py", indent: 1 },
+          { name: "requirements.txt", indent: 1 },
+        ],
+        lines: [
+          "from fastapi import FastAPI, Query",
+          "from recommender.hybrid import TunedHybridEngine",
+          "",
+          "app = FastAPI(title=\"Shopwise Recommender API\")",
+          "engine = TunedHybridEngine.load(\"artifacts/uci_hybrid.pkl\")",
+          "",
+          "@app.post(\"/api/v2/recommend/{user_id}\")",
+          "async def predict_items(user_id: int, top_k: int = Query(5)):",
+          "    # Tuned hybrid: Popularity + TF-IDF + Item-CF + SVD",
+          "    recs = engine.predict(user_id=user_id, k=top_k)",
+          "    return {",
+          "        \"user_id\": user_id,",
+          "        \"recommendations\": recs,",
+          "        \"median_latency_ms\": 14.2",
+          "    }",
+        ],
+        terminalCmd: "shlok@macbook:~/Shopwise (main) $ uvicorn main:app --port 8000",
+        terminalOut: [
+          "INFO:     Loaded UCI Online Retail II (7,463 orders)",
+          "INFO:     Uvicorn running on http://127.0.0.1:8000",
+          "INFO:     POST /api/v2/recommend/14820 200 OK (14.2ms)",
+        ],
+      },
+    ],
+    []
+  );
+
+  const texture = useMemo(() => {
+    if (typeof document === "undefined") return null;
+    const canvas = document.createElement("canvas");
+    canvas.width = 2048;
+    canvas.height = 1280;
+    canvasRef.current = canvas;
+    const tex = new THREE.CanvasTexture(canvas);
+    tex.colorSpace = THREE.SRGBColorSpace;
+    tex.generateMipmaps = true;
+    tex.minFilter = THREE.LinearMipmapLinearFilter;
+    tex.magFilter = THREE.LinearFilter;
+    textureRef.current = tex;
+    return tex;
+  }, []);
+
+  useFrame((state) => {
+    const canvas = canvasRef.current;
+    const tex = textureRef.current;
+    if (!canvas || !tex) return;
+
+    const now = state.clock.elapsedTime;
+    if (now - lastUpdateRef.current < 0.045) return;
+    lastUpdateRef.current = now;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    charIndexRef.current += 1;
+    const activeTab = tabRef.current;
+    const snippet = snippets[activeTab];
+
+    const W = 2048;
+    const H = 1280;
+
+    // 1. Classy High-End Developer Wallpaper (Deep midnight silk wave gradient)
+    const bgGrad = ctx.createLinearGradient(0, 0, W, H);
+    bgGrad.addColorStop(0, "#070c18");
+    bgGrad.addColorStop(0.35, "#0b172d");
+    bgGrad.addColorStop(0.65, "#081020");
+    bgGrad.addColorStop(1, "#03060c");
+    ctx.fillStyle = bgGrad;
+    ctx.fillRect(0, 0, W, H);
+
+    // Subtle ambient wallpaper light ribbons
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(0, H * 0.7);
+    ctx.bezierCurveTo(W * 0.35, H * 0.45, W * 0.65, H * 0.85, W, H * 0.4);
+    ctx.lineTo(W, H);
+    ctx.lineTo(0, H);
+    ctx.closePath();
+    const ribbonGrad = ctx.createLinearGradient(0, H * 0.5, W, H);
+    ribbonGrad.addColorStop(0, "rgba(56, 189, 248, 0.08)");
+    ribbonGrad.addColorStop(0.5, "rgba(99, 102, 241, 0.07)");
+    ribbonGrad.addColorStop(1, "rgba(168, 85, 247, 0.05)");
+    ctx.fillStyle = ribbonGrad;
+    ctx.fill();
+    ctx.restore();
+
+    // 2. Classy Desktop Top Menu Bar
+    ctx.fillStyle = "rgba(10, 15, 25, 0.85)";
+    ctx.fillRect(0, 0, W, 42);
+    ctx.fillStyle = "rgba(255, 255, 255, 0.08)";
+    ctx.fillRect(0, 41, W, 1);
+
+    ctx.fillStyle = "#e2e8f0";
+    ctx.font = "bold 15px system-ui, -apple-system, sans-serif";
+    ctx.fillText("Code", 28, 26);
+    ctx.fillStyle = "#94a3b8";
+    ctx.font = "14px system-ui, -apple-system, sans-serif";
+    ctx.fillText("File     Edit     Selection     View     Go     Run     Terminal     Help", 85, 26);
+
+    ctx.fillStyle = "#94a3b8";
+    ctx.fillText("Vadodara, IN   ·   17:30   ·   HP Spectre x360   ·   [⚡ 98%]", W - 490, 26);
+
+    // 3. Floating VS Code Application Window (with luxury dropshadow & rounded border)
+    const winX = 110;
+    const winY = 68;
+    const winW = 1828;
+    const winH = 1100;
+    const r = 14;
+
+    // Window shadow
+    ctx.save();
+    ctx.fillStyle = "rgba(0, 0, 0, 0.55)";
+    ctx.beginPath();
+    ctx.roundRect(winX - 8, winY - 4, winW + 16, winH + 16, r + 4);
+    ctx.fill();
+    ctx.restore();
+
+    // Window clip & base
+    ctx.save();
+    ctx.beginPath();
+    ctx.roundRect(winX, winY, winW, winH, r);
+    ctx.clip();
+
+    ctx.fillStyle = "#1e1e1e";
+    ctx.fillRect(winX, winY, winW, winH);
+
+    // Window Titlebar (#181818)
+    ctx.fillStyle = "#181818";
+    ctx.fillRect(winX, winY, winW, 48);
+    ctx.fillStyle = "#2b2b2b";
+    ctx.fillRect(winX, winY + 47, winW, 1);
+
+    // Traffic light dots
+    [
+      { x: winX + 28, c: "#ff5f57" },
+      { x: winX + 54, c: "#febc2e" },
+      { x: winX + 80, c: "#28c840" },
+    ].forEach((dot) => {
+      ctx.fillStyle = dot.c;
+      ctx.beginPath();
+      ctx.arc(dot.x, winY + 24, 7, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    // Command palette search
+    ctx.fillStyle = "#242424";
+    ctx.fillRect(winX + 520, winY + 9, 680, 30);
+    ctx.strokeStyle = "#383838";
+    ctx.lineWidth = 1;
+    ctx.strokeRect(winX + 520, winY + 9, 680, 30);
+    ctx.fillStyle = "#8b949e";
+    ctx.font = "15px system-ui, -apple-system, sans-serif";
+    ctx.fillText("SurplusShare — Visual Studio Code", winX + 740, winY + 29);
+
+    // Activity Bar (Leftmost 64px inside window)
+    ctx.fillStyle = "#181818";
+    ctx.fillRect(winX, winY + 48, 64, winH - 82);
+    ctx.fillStyle = "#2b2b2b";
+    ctx.fillRect(winX + 63, winY + 48, 1, winH - 82);
+
+    ctx.fillStyle = "#007acc";
+    ctx.fillRect(winX, winY + 68, 3, 44);
+    ctx.strokeStyle = "#d4d4d4";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(winX + 20, winY + 76, 22, 28);
+    ctx.strokeStyle = "#6e7681";
+    ctx.beginPath();
+    ctx.arc(winX + 31, winY + 155, 10, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // File Explorer Sidebar (x: winX + 64 .. winX + 340)
+    ctx.fillStyle = "#181818";
+    ctx.fillRect(winX + 64, winY + 48, 276, winH - 82);
+    ctx.fillStyle = "#2b2b2b";
+    ctx.fillRect(winX + 339, winY + 48, 1, winH - 82);
+
+    ctx.fillStyle = "#bbbbbb";
+    ctx.font = "600 14px system-ui, -apple-system, sans-serif";
+    ctx.fillText("EXPLORER", winX + 86, winY + 82);
+
+    snippet.tree.forEach((item, idx) => {
+      const iy = winY + 118 + idx * 34;
+      if (item.active) {
+        ctx.fillStyle = "#37373d";
+        ctx.fillRect(winX + 64, iy - 22, 275, 32);
+      }
+      ctx.fillStyle = item.active ? "#ffffff" : item.folder ? "#cccccc" : "#9da5b4";
+      ctx.font = item.folder
+        ? "600 15px system-ui, -apple-system, sans-serif"
+        : "15px system-ui, -apple-system, sans-serif";
+      const prefix = item.folder ? (item.open ? "▾ " : "▸ ") : "  ";
+      ctx.fillText(prefix + item.name, winX + 86 + item.indent * 20, iy);
+    });
+
+    // Editor Tabs Bar
+    const editorX = winX + 340;
+    const editorW = winW - 340;
+    ctx.fillStyle = "#181818";
+    ctx.fillRect(editorX, winY + 48, editorW, 50);
+    ctx.fillStyle = "#2b2b2b";
+    ctx.fillRect(editorX, winY + 97, editorW, 1);
+
+    snippets.forEach((s, idx) => {
+      const isCurrent = idx === activeTab;
+      const tabX = editorX + idx * 300;
+      ctx.fillStyle = isCurrent ? "#1f1f1f" : "#181818";
+      ctx.fillRect(tabX, winY + 48, 300, 49);
+      if (isCurrent) {
+        ctx.fillStyle = "#007acc";
+        ctx.fillRect(tabX, winY + 48, 300, 3);
+      }
+      ctx.fillStyle = "#2b2b2b";
+      ctx.fillRect(tabX + 299, winY + 48, 1, 49);
+
+      ctx.fillStyle = isCurrent ? "#ffffff" : "#8b949e";
+      ctx.font = "16px system-ui, -apple-system, sans-serif";
+      ctx.fillText(s.filename, tabX + 22, winY + 79);
+    });
+
+    // Breadcrumb bar
+    ctx.fillStyle = "#1f1f1f";
+    ctx.fillRect(editorX, winY + 98, editorW, 36);
+    ctx.fillStyle = "#8b949e";
+    ctx.font = "15px system-ui, -apple-system, sans-serif";
+    ctx.fillText(snippet.path, editorX + 24, winY + 122);
+
+    // Code Editor Area
+    ctx.fillStyle = "#1f1f1f";
+    ctx.fillRect(editorX, winY + 134, editorW, 640);
+
+    // Indent guides
+    ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
+    ctx.fillRect(editorX + 96, winY + 148, 1, 610);
+    ctx.fillRect(editorX + 136, winY + 148, 1, 610);
+
+    const lineHeight = 38;
+    let drawnChars = 0;
+    const maxChars = charIndexRef.current;
+
+    for (let i = 0; i < snippet.lines.length; i++) {
+      const line = snippet.lines[i];
+      const lineY = winY + 176 + i * lineHeight;
+
+      // Active line highlight
+      if (drawnChars < maxChars && drawnChars + line.length >= maxChars) {
+        ctx.fillStyle = "rgba(255, 255, 255, 0.035)";
+        ctx.fillRect(editorX, lineY - 26, editorW - 120, lineHeight);
+      }
+
+      // Line number
+      ctx.fillStyle = "#6e7681";
+      ctx.font = "17px 'JetBrains Mono', Consolas, monospace";
+      ctx.fillText(String(i + 1).padStart(2, " "), editorX + 24, lineY);
+
+      if (drawnChars < maxChars) {
+        const charsToDraw = Math.min(line.length, maxChars - drawnChars);
+        const sub = line.slice(0, charsToDraw);
+
+        if (sub.trim().startsWith("//") || sub.trim().startsWith("#")) {
+          ctx.fillStyle = "#6a9955";
+        } else if (sub.trim().startsWith("@")) {
+          ctx.fillStyle = "#dcdcaa";
+        } else if (
+          sub.trim().startsWith("package") ||
+          sub.trim().startsWith("import") ||
+          sub.trim().startsWith("from") ||
+          sub.trim().startsWith("public") ||
+          sub.trim().startsWith("async") ||
+          sub.trim().startsWith("return")
+        ) {
+          ctx.fillStyle = "#c586c0";
+        } else if (sub.includes("\"")) {
+          ctx.fillStyle = "#ce9178";
+        } else if (sub.includes("ResponseEntity") || sub.includes("FastAPI") || sub.includes("DispatchService")) {
+          ctx.fillStyle = "#4ec9b0";
+        } else {
+          ctx.fillStyle = "#d4d4d4";
+        }
+
+        ctx.font = "20px 'JetBrains Mono', Consolas, monospace";
+        ctx.fillText(sub, editorX + 76, lineY);
+        drawnChars += line.length;
+
+        // Thin authentic caret
+        if (drawnChars >= maxChars && Math.floor(now * 2.6) % 2 === 0) {
+          const textWidth = ctx.measureText(sub).width;
+          ctx.fillStyle = "#aeafad";
+          ctx.fillRect(editorX + 78 + textWidth, lineY - 20, 2.5, 24);
+        }
+      }
+    }
+
+    if (drawnChars >= snippet.lines.join("").length + 80) {
+      charIndexRef.current = 0;
+      tabRef.current = activeTab === 0 ? 1 : 0;
+    }
+
+    // Code Minimap (Right edge)
+    const minimapX = editorX + editorW - 110;
+    ctx.fillStyle = "#1f1f1f";
+    ctx.fillRect(minimapX, winY + 134, 110, 640);
+    for (let m = 0; m < 22; m++) {
+      ctx.fillStyle = m % 4 === 0 ? "#4ec9b0" : m % 3 === 0 ? "#c586c0" : "#555555";
+      ctx.globalAlpha = 0.32;
+      ctx.fillRect(minimapX + 12, winY + 152 + m * 13, 36 + ((m * 17) % 50), 4);
+    }
+    ctx.globalAlpha = 1;
+
+    // Integrated Terminal Panel
+    const termY = winY + 774;
+    const termH = winH - 808;
+    ctx.fillStyle = "#181818";
+    ctx.fillRect(editorX, termY, editorW, termH);
+    ctx.fillStyle = "#2b2b2b";
+    ctx.fillRect(editorX, termY, editorW, 1);
+
+    ctx.fillStyle = "#8b949e";
+    ctx.font = "14px system-ui, -apple-system, sans-serif";
+    ctx.fillText("PROBLEMS     OUTPUT     DEBUG CONSOLE", editorX + 24, termY + 30);
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText("TERMINAL", editorX + 348, termY + 30);
+    ctx.fillStyle = "#007acc";
+    ctx.fillRect(editorX + 348, termY + 37, 72, 2);
+
+    ctx.fillStyle = "#4ec9b0";
+    ctx.font = "18px 'JetBrains Mono', Consolas, monospace";
+    ctx.fillText(snippet.terminalCmd, editorX + 24, termY + 76);
+
+    snippet.terminalOut.forEach((tLine, idx) => {
+      ctx.fillStyle = tLine.includes("SUCCESS") || tLine.includes("200 OK") ? "#4ade80" : "#cccccc";
+      ctx.font = "17px 'JetBrains Mono', Consolas, monospace";
+      ctx.fillText(tLine, editorX + 24, termY + 114 + idx * 30);
+    });
+
+    // VS Code Blue Status Bar at bottom of window
+    ctx.fillStyle = "#007acc";
+    ctx.fillRect(winX, winY + winH - 34, winW, 34);
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "15px system-ui, -apple-system, sans-serif";
+    ctx.fillText("⎇ main*    ⊗ 0   ⚠ 0", winX + 20, winY + winH - 12);
+    ctx.fillText(`Ln 12, Col 42     Spaces: 4     UTF-8     ${snippet.lang}`, winX + winW - 460, winY + winH - 12);
+
+    ctx.restore(); // End window clip
+
+    // 4. Classy Desktop Dock at screen bottom
+    const dockW = 460;
+    const dockH = 68;
+    const dockX = (W - dockW) / 2;
+    const dockY = H - 86;
+
+    ctx.save();
+    ctx.fillStyle = "rgba(15, 23, 42, 0.75)";
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.12)";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.roundRect(dockX, dockY, dockW, dockH, 20);
+    ctx.fill();
+    ctx.stroke();
+
+    // Dock app icons
+    const apps = [
+      { name: "Finder", color: "#38bdf8" },
+      { name: "Terminal", color: "#1e293b" },
+      { name: "VS Code", color: "#007acc", active: true },
+      { name: "Chrome", color: "#ea4335" },
+      { name: "GitHub", color: "#8b5cf6" },
+      { name: "Settings", color: "#64748b" },
+    ];
+
+    apps.forEach((app, idx) => {
+      const ax = dockX + 26 + idx * 72;
+      const ay = dockY + 14;
+
+      ctx.fillStyle = app.color;
+      ctx.beginPath();
+      ctx.roundRect(ax, ay, 40, 40, 10);
+      ctx.fill();
+
+      if (app.active) {
+        ctx.fillStyle = "#ffffff";
+        ctx.beginPath();
+        ctx.arc(ax + 20, dockY + 60, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    });
+    ctx.restore();
+
+    if (flashRef.current > 0) {
+      ctx.fillStyle = `rgba(255, 255, 255, ${flashRef.current * 0.12})`;
+      ctx.fillRect(0, 0, W, H);
+      flashRef.current -= 0.08;
+    }
+
+    tex.needsUpdate = true;
+  });
+
+  const handleClick = (e: any) => {
+    e.stopPropagation();
+    tabRef.current = tabRef.current === 0 ? 1 : 0;
+    charIndexRef.current = 0;
+    flashRef.current = 1.0;
+  };
+
+  return (
+    <group position={[0, 0.20, -0.007]} onClick={handleClick}>
+      {/* Piano-black glass bezel */}
+      <mesh rotation={[0, Math.PI, 0]}>
+        <planeGeometry args={[0.645, 0.388]} />
+        <meshStandardMaterial color="#05080f" metalness={0.92} roughness={0.14} />
+      </mesh>
+
+      {/* Centered HD camera aperture & lens dot */}
+      <mesh position={[0, 0.183, -0.0015]}>
+        <circleGeometry args={[0.0035, 16]} />
+        <meshBasicMaterial color="#020408" />
+      </mesh>
+      <mesh position={[-0.001, 0.184, -0.002]}>
+        <circleGeometry args={[0.001, 12]} />
+        <meshBasicMaterial color="#38bdf8" />
+      </mesh>
+      <mesh position={[0.012, 0.183, -0.0015]}>
+        <circleGeometry args={[0.0012, 12]} />
+        <meshBasicMaterial color="#22c55e" />
+      </mesh>
+
+      {/* Physically shaded backlit IPS/OLED display */}
+      {texture && (
+        <mesh position={[0, -0.004, -0.0018]} rotation={[0, Math.PI, 0]}>
+          <planeGeometry args={[0.612, 0.354]} />
+          <meshStandardMaterial
+            map={texture}
+            emissiveMap={texture}
+            emissive="#ffffff"
+            emissiveIntensity={0.88}
+            roughness={0.22}
+            metalness={0.08}
+          />
+        </mesh>
+      )}
+
+      {/* Subtle anti-reflective glass coating */}
+      <mesh position={[0, -0.004, -0.003]} rotation={[0, Math.PI, 0]}>
+        <planeGeometry args={[0.612, 0.354]} />
+        <meshStandardMaterial
+          color="#ffffff"
+          transparent
+          opacity={0.05}
+          roughness={0.08}
+          metalness={0.4}
+        />
+      </mesh>
+
+      {/* Natural screen ambient glow on hands and keyboard */}
+      <pointLight position={[0, 0, -0.18]} color="#7dd3fc" intensity={1.8} distance={1.8} />
     </group>
   );
 }

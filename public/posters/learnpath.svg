@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="55%" stop-color="#0b1323"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="45%" r="48%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#94a3b8" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="760" height="480" fill="url(#bg)"/>
+  <rect width="760" height="480" fill="url(#grid)"/>
+  <rect width="760" height="480" fill="url(#glow)"/>
+
+  <!-- Top editorial bar -->
+  <text x="42" y="54" fill="#818cf8" font-family="monospace" font-size="13" font-weight="700" letter-spacing="2.2">06 // GEMINI AI · ADAPTIVE LEARNING</text>
+  <line x1="42" y1="74" x2="718" y2="74" stroke="#94a3b8" stroke-opacity="0.16"/>
+
+  <!-- Left poster typography -->
+  <text x="42" y="168" fill="#f8fafc" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="40" font-weight="800" letter-spacing="-0.8">LearnPath</text>
+  <text x="42" y="204" fill="#94a3b8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="500">Real-Time Adaptive Study Paths</text>
+
+  <!-- Telemetry stat boxes -->
+  <rect x="42" y="260" width="154" height="74" rx="12" fill="#09101d" stroke="#818cf8" stroke-opacity="0.28"/>
+  <text x="58" y="294" fill="#f8fafc" font-family="monospace" font-size="20" font-weight="700">ADAPTIVE</text>
+  <text x="58" y="317" fill="#64748b" font-family="monospace" font-size="11" letter-spacing="1.4">QUIZ INJECT</text>
+
+  <rect x="210" y="260" width="154" height="74" rx="12" fill="#09101d" stroke="#38bdf8" stroke-opacity="0.28"/>
+  <text x="226" y="294" fill="#818cf8" font-family="monospace" font-size="20" font-weight="700">LINDE CO-DEV</text>
+  <text x="226" y="317" fill="#64748b" font-family="monospace" font-size="11" letter-spacing="1.4">COLLABORATION</text>
+
+  <!-- Right bespoke domain graphic -->
+  
+      <path d="M445 310 L515 245 L585 265 L665 170" fill="none" stroke="url(#grad)" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="445" cy="310" r="12" fill="#0b1322" stroke="#818cf8" stroke-width="3" />
+      <circle cx="515" cy="245" r="12" fill="#0b1322" stroke="#38bdf8" stroke-width="3" />
+      <circle cx="585" cy="265" r="12" fill="#0b1322" stroke="#818cf8" stroke-width="3" />
+      <circle cx="665" cy="170" r="14" fill="#38bdf8" />
+      <rect x="435" y="145" width="185" height="34" rx="8" fill="#0b1322" stroke="#818cf8" stroke-opacity="0.4" />
+      <text x="452" y="167" fill="#e2e8f0" font-family="monospace" font-size="12">MASTERY PATH · 92% READY</text>
+    
+
+  <!-- Bottom signature -->
+  <line x1="42" y1="420" x2="718" y2="420" stroke="#94a3b8" stroke-opacity="0.12"/>
+  <text x="42" y="448" fill="#475569" font-family="monospace" font-size="12" letter-spacing="1.5">SHLOK SATHWARA · SELECTED BUILD</text>
+  <circle cx="710" cy="443" r="5" fill="#818cf8"/>
+</svg>

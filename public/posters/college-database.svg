@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="55%" stop-color="#0b1323"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="45%" r="48%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#94a3b8" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="760" height="480" fill="url(#bg)"/>
+  <rect width="760" height="480" fill="url(#grid)"/>
+  <rect width="760" height="480" fill="url(#glow)"/>
+
+  <!-- Top editorial bar -->
+  <text x="42" y="54" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="700" letter-spacing="2.2">14 // MYSQL · NODE.JS · DBMS</text>
+  <line x1="42" y1="74" x2="718" y2="74" stroke="#94a3b8" stroke-opacity="0.16"/>
+
+  <!-- Left poster typography -->
+  <text x="42" y="168" fill="#f8fafc" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="40" font-weight="800" letter-spacing="-0.8">College Database System</text>
+  <text x="42" y="204" fill="#94a3b8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="500">Normalized Relational DBMS</text>
+
+  <!-- Telemetry stat boxes -->
+  <rect x="42" y="260" width="154" height="74" rx="12" fill="#09101d" stroke="#38bdf8" stroke-opacity="0.28"/>
+  <text x="58" y="294" fill="#f8fafc" font-family="monospace" font-size="20" font-weight="700">3NF SQL</text>
+  <text x="58" y="317" fill="#64748b" font-family="monospace" font-size="11" letter-spacing="1.4">NORMALIZED</text>
+
+  <rect x="210" y="260" width="154" height="74" rx="12" fill="#09101d" stroke="#34d399" stroke-opacity="0.28"/>
+  <text x="226" y="294" fill="#38bdf8" font-family="monospace" font-size="20" font-weight="700">FULL CRUD</text>
+  <text x="226" y="317" fill="#64748b" font-family="monospace" font-size="11" letter-spacing="1.4">NODE + MYSQL</text>
+
+  <!-- Right bespoke domain graphic -->
+  
+      <rect x="425" y="150" width="110" height="72" rx="8" fill="#0b1322" stroke="#38bdf8" stroke-opacity="0.5" />
+      <rect x="580" y="150" width="110" height="72" rx="8" fill="#0b1322" stroke="#34d399" stroke-opacity="0.5" />
+      <rect x="502" y="262" width="110" height="72" rx="8" fill="#0b1322" stroke="#38bdf8" stroke-opacity="0.5" />
+      <line x1="535" y1="186" x2="580" y2="186" stroke="#38bdf8" stroke-width="2" />
+      <line x1="480" y1="222" x2="535" y2="262" stroke="#34d399" stroke-width="2" />
+      <line x1="635" y1="222" x2="580" y2="262" stroke="#38bdf8" stroke-width="2" />
+    
+
+  <!-- Bottom signature -->
+  <line x1="42" y1="420" x2="718" y2="420" stroke="#94a3b8" stroke-opacity="0.12"/>
+  <text x="42" y="448" fill="#475569" font-family="monospace" font-size="12" letter-spacing="1.5">SHLOK SATHWARA · SELECTED BUILD</text>
+  <circle cx="710" cy="443" r="5" fill="#38bdf8"/>
+</svg>

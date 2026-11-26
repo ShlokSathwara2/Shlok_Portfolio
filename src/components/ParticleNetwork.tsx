@@ -210,6 +210,22 @@ export default function ParticleNetwork({ scrollY = 0 }: { scrollY?: number }) {
           }
         }
 
+        // Secondary gravity attractor toward hovered project card
+        const activeCard = (window as unknown as { __activeProjectCard?: { x: number; y: number } | null })
+          .__activeProjectCard;
+        if (activeCard) {
+          const cdx = activeCard.x - p.x;
+          const cdy = activeCard.y - p.y;
+          const cDistSq = cdx * cdx + cdy * cdy;
+          const cardRadius = 380;
+          if (cDistSq < cardRadius * cardRadius && cDistSq > 4) {
+            const cDist = Math.sqrt(cDistSq);
+            const pull = (1 - cDist / cardRadius) * 1.45;
+            p.x += (cdx / cDist) * pull;
+            p.y += (cdy / cDist) * pull;
+          }
+        }
+
         // Pulse breathing
         p.pulsePhase += p.pulseSpeed;
         const pulse = Math.sin(p.pulsePhase) * 0.25;

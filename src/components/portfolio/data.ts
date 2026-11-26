@@ -350,6 +350,8 @@ export const projects: ProjectItem[] = [
     ],
     link: "https://frontend-gray-two-c2lribev7e.vercel.app",
     github: "https://github.com/ShlokSathwara2/Surplusshare",
+    image: "/posters/surplusshare.svg",
+    imageAlt: "SurplusShare platform preview",
   },
   {
     title: "Shopwise",
@@ -363,6 +365,8 @@ export const projects: ProjectItem[] = [
       "E-commerce",
     ],
     github: "https://github.com/ShlokSathwara2/Shopwise",
+    image: "/posters/shopwise.svg",
+    imageAlt: "Shopwise recommender engine preview",
   },
   {
     title: "Threshold Website",
@@ -393,6 +397,8 @@ export const projects: ProjectItem[] = [
     ],
     link: "https://lecturn-app.vercel.app",
     github: "https://github.com/ShlokSathwara2/Lecturn",
+    image: "/posters/lecturn.svg",
+    imageAlt: "Lecturn PWA preview",
   },
   {
     title: "Global Deal Finder",
@@ -409,6 +415,8 @@ export const projects: ProjectItem[] = [
     ],
     link: "https://global-deal-finder-tau.vercel.app",
     github: "https://github.com/ShlokSathwara2/Global-Deal-Finder",
+    image: "/posters/global-deal-finder.svg",
+    imageAlt: "Global Deal Finder preview",
   },
   {
     title: "LearnPath",
@@ -416,6 +424,8 @@ export const projects: ProjectItem[] = [
       "AI-driven adaptive study-path platform with real-time quiz injection. Built with Aditya Bhambhani (Rutgers). Co-developed at Linde.",
     stack: ["Next.js", "Supabase", "Gemini API", "AI/ML"],
     link: "https://learnpath-ai-nuiw.vercel.app",
+    image: "/posters/learnpath.svg",
+    imageAlt: "LearnPath study platform preview",
   },
   {
     title: "Threshold",
@@ -453,6 +463,8 @@ export const projects: ProjectItem[] = [
     ],
     link: "https://smart-flow-ai-delta.vercel.app",
     github: "https://github.com/ShlokSathwara2/Smart-Study-Planner-with-AI",
+    image: "/posters/smartstudy-ai.svg",
+    imageAlt: "SmartStudy AI preview",
   },
   {
     title: "TRIKIA",
@@ -461,12 +473,16 @@ export const projects: ProjectItem[] = [
     stack: ["React", "Node/Express", "MongoDB", "React Native", "JWT"],
     link: "https://ai-budget-tracker-9d2e.vercel.app",
     github: "https://github.com/ShlokSathwara2/AI-BUDGET-TRACKER",
+    image: "/posters/trikia.svg",
+    imageAlt: "TRIKIA AI budget tracker preview",
   },
   {
     title: "PipeStressRM",
     description:
       "Automated resource/scheduling system for pipe-stress engineering. Skill/workload-based task matching, 2-year Gantt schedules generated in under a minute.",
     stack: ["Python", "OpenPyXL", "Excel Automation"],
+    image: "/posters/pipestressrm.svg",
+    imageAlt: "PipeStressRM engineering scheduler preview",
   },
   {
     title: "Smart Attendance System",
@@ -474,12 +490,16 @@ export const projects: ProjectItem[] = [
       "GPS-verified attendance with entity-repo-service-controller backend. Geofencing, real-time tracking, role-based dashboards.",
     stack: ["Java", "JDBC", "MySQL", "HTML", "JavaScript"],
     github: "https://github.com/ShlokSathwara2/GPS-ATTENDANCE-SYSTEM",
+    image: "/posters/smart-attendance.svg",
+    imageAlt: "Smart Attendance System preview",
   },
   {
     title: "CineMatch",
     description:
       "AI movie recommendation engine with personalized suggestions based on user preferences and viewing history.",
     stack: ["React/Next.js", "Flask", "TMDB API"],
+    image: "/posters/cinematch.svg",
+    imageAlt: "CineMatch recommendation engine preview",
   },
   {
     title: "Smart Study Planner",
@@ -487,6 +507,8 @@ export const projects: ProjectItem[] = [
       "Python + AI planning logic with Streamlit interface. Task prioritization and schedule generation.",
     stack: ["Python", "Streamlit", "AI"],
     github: "https://github.com/ShlokSathwara2/Smart-Study-Planner",
+    image: "/posters/smart-study-planner.svg",
+    imageAlt: "Smart Study Planner preview",
   },
   {
     title: "College Database System",
@@ -494,6 +516,8 @@ export const projects: ProjectItem[] = [
       "DBMS mini-project with MySQL. Normalization, CRUD operations, and comprehensive data management.",
     stack: ["MySQL", "JavaScript", "Node.js"],
     github: "https://github.com/ShlokSathwara2/College-Database-System",
+    image: "/posters/college-database.svg",
+    imageAlt: "College Database System preview",
   },
 ];
 

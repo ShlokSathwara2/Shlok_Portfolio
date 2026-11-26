@@ -15,6 +15,12 @@ import ProofModal from "../ui/proof-modal";
 const clamp = (value: number, min: number, max: number) =>
   Math.max(min, Math.min(max, value));
 
+declare global {
+  interface Window {
+    __activeProjectCard?: { x: number; y: number } | null;
+  }
+}
+
 export default function ProjectsSection() {
   const isDesktop = useMediaQuery("(min-width: 900px)");
   const sectionRef = useRef<HTMLElement>(null);
@@ -85,32 +91,69 @@ export default function ProjectsSection() {
         <div className="projects-track-wrap">
           <div className="projects-track" ref={trackRef}>
             {projects.map((project, index) => (
-              <article className="project-card" key={project.title}>
+              <article
+                className="project-card"
+                key={project.title}
+                onMouseMove={(e) => {
+                  const card = e.currentTarget;
+                  const rect = card.getBoundingClientRect();
+                  const px = (e.clientX - rect.left) / rect.width - 0.5;
+                  const py = (e.clientY - rect.top) / rect.height - 0.5;
+                  card.style.setProperty("--tilt-x", `${(-py * 9).toFixed(2)}deg`);
+                  card.style.setProperty("--tilt-y", `${(px * 10).toFixed(2)}deg`);
+                  card.style.setProperty("--glare-x", `${((px + 0.5) * 100).toFixed(1)}%`);
+                  card.style.setProperty("--glare-y", `${((py + 0.5) * 100).toFixed(1)}%`);
+                  card.style.setProperty("--parallax-x", `${(px * 14).toFixed(1)}px`);
+                  card.style.setProperty("--parallax-y", `${(py * 10).toFixed(1)}px`);
+                  card.style.setProperty("--card-hover", "1");
+                  window.__activeProjectCard = {
+                    x: rect.left + rect.width * 0.5,
+                    y: rect.top + rect.height * 0.5,
+                  };
+                }}
+                onMouseLeave={(e) => {
+                  const card = e.currentTarget;
+                  card.style.setProperty("--tilt-x", "0deg");
+                  card.style.setProperty("--tilt-y", "0deg");
+                  card.style.setProperty("--parallax-x", "0px");
+                  card.style.setProperty("--parallax-y", "0px");
+                  card.style.setProperty("--card-hover", "0");
+                  window.__activeProjectCard = null;
+                }}
+              >
                 <div className="project-visual">
                   {project.image ? (
                     <Image
                       src={project.image}
                       alt={project.imageAlt ?? project.title}
                       fill
+                      unoptimized={project.image.endsWith(".svg")}
                       sizes="(max-width: 900px) 90vw, 48vw"
                       className="project-image"
                     />
-                  ) : (
-                    <div
-                      className={`project-visual-placeholder accent-${index % 4}`}
-                    >
-                      <span className="project-visual-index">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span className="project-visual-title">
-                        {project.title}
-                      </span>
-                      <span className="project-visual-grid" />
-                      <span className="project-visual-stack">
-                        {project.stack.slice(0, 3).join(" · ")}
-                      </span>
-                    </div>
-                  )}
+                  ) : null}
+
+                  {/* Dynamic Animated Cyber Poster Elements */}
+                  <div className={`project-visual-poster accent-${index % 4}${project.image ? " has-image" : " standalone"}`}>
+                    <div className="project-scanline" aria-hidden />
+                    <span className="project-visual-index">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    {!project.image && (
+                      <div className="project-poster-content">
+                        <span className="project-poster-badge">
+                          <span className="project-poster-dot" />
+                          0{index + 1} // SELECTED BUILD
+                        </span>
+                        <h4 className="project-visual-title">{project.title}</h4>
+                        <span className="project-visual-stack">
+                          {project.stack.slice(0, 3).join(" · ")}
+                        </span>
+                      </div>
+                    )}
+                    <span className="project-visual-grid" />
+                  </div>
+
                   <span className="project-visual-shade" aria-hidden />
                   <span className="project-number" aria-hidden>
                     {String(index + 1).padStart(2, "0")}
