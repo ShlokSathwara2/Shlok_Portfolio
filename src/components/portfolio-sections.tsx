@@ -13,7 +13,7 @@ import {
   ResearchSection,
   SiteFooter,
 } from "./portfolio/sections";
-import ProjectsSection from "./portfolio/projects";
+import WorkSection from "./portfolio/WorkSection";
 import SkillsSection from "./portfolio/skills-physics";
 import TestimonialsSection from "./portfolio/testimonials";
 
@@ -50,7 +50,7 @@ export default function PortfolioSections() {
       <ExperienceSection />
       <ResearchSection />
       <BuildingSection />
-      <ProjectsSection />
+      <WorkSection />
       <EducationSection />
       <SkillsSection />
       <CertificationsSection />

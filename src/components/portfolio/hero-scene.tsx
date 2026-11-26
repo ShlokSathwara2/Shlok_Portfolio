@@ -245,8 +245,12 @@ function Scene({
       {/* Electric violet rim light for cinematic silhouette */}
       <pointLight position={[0, 2.6, -2.4]} intensity={2.2} color="#a855f7" />
 
+      {/* Cool pink & cyan rim lights on shoulders and hair */}
+      <pointLight position={[-1.9, 1.85, -1.1]} intensity={1.9} color="#ec4899" />
+      <pointLight position={[1.9, 1.85, -1.1]} intensity={1.9} color="#38bdf8" />
+
       {/* Active laptop IDE screen glow on Shlok's face & hands */}
-      <pointLight position={[0, 0.95, 0.35]} intensity={0.9} color="#38bdf8" />
+      <pointLight position={[0, 0.95, 0.35]} intensity={1.1} color="#38bdf8" />
 
       <Character
         pointerRef={pointerRef}
@@ -287,8 +291,16 @@ export default function HeroScene({
           far: 100,
         }}
         frameloop={reducedMotion ? "demand" : active ? "always" : "never"}
-        onCreated={({ camera }) => {
+        onCreated={({ camera, gl }) => {
           camera.lookAt(new THREE.Vector3(...heroPose.target));
+          const el = gl.domElement;
+          el.addEventListener(
+            "webglcontextlost",
+            (e) => {
+              e.preventDefault();
+            },
+            false
+          );
         }}
       >
         <Scene
